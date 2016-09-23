@@ -1,0 +1,99 @@
+html
+	font-size: 14px
+body
+	box-sizing: border-box
+header
+	width: 100%
+	height: 48px
+	background: #161a1b
+	font-family: 'Roboto', sans-serif
+
+	.other-type
+		width: 480px
+		height: 48px 
+		margin-left: 30px
+		float: left
+		line-height: 48px
+		font-weight: 500
+		// text-align: center
+		span 
+			color: #71797c
+			text-transform: uppercase
+			margin-left: 30px
+			font-size: 0.929rem
+			cursor: pointer
+			transition: color,1s, easy-in-out
+			&:hover, &:active
+				color: #f4f750
+	.setting
+		padding-top: 13px
+		.search-service
+			width: 240px
+			height: 100% 
+			padding-left: 10px
+			float: right
+			box-sizing: border-box
+			i 
+				color: #dcdf3c
+				margin-right: 13px
+			input
+				background: transparent
+				color: #717779
+				border: none
+				font-size: 0.929rem
+				&:focus
+					outline: none
+		.change-lang
+			float: right
+			margin-right: 40px
+			select
+				width: 110px 
+				background: transparent
+				color: #71797c
+				border: none
+				text-indent: 5px
+				&:hover
+					background: #dce123
+				&:focus
+					outline: none
+				option 	
+					background: #dce123
+					&:focus
+						background: #f4f750
+		.size-allfont
+			float: right
+			margin-right: 40px
+			color: #929c9f
+			cursor: pointer
+			.font-minus
+				display: inline-block
+				transition: color, 1s, easy-in-out
+				&:hover
+					color: #f4f750
+				i 
+					font-size: 0.786rem
+				.fa-minus
+					display: none
+					font-size: 0.571rem
+					position: relative
+					top: -7px
+			.font-plus
+				&:hover
+					color: #f4f750
+				display: inline-block
+				transition: color, 1s, easy-in-out
+				.fa-font 
+					font-size: 1.143rem 
+				.fa-plus
+					font-size: 0.714rem
+					position: relative
+					top: -7px
+			&:hover
+				.font-minus
+					padding-right: 10px
+					.fa-minus
+						display: inline-block
+				.font-plus
+					padding-left: 10px
+					border-left: #929c9f solid 1px
+			

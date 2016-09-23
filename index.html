@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/4.1.1/normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/elusive-icons.min.css">
+
+</head>
+<body>
+	<header>
+		<div class="other-type">
+			<span>Особистий</span>
+			<span>Малий та середній бізнес</span>
+			<span>Корпоративний</span>
+		</div>
+		<div class="setting">
+			<div class="search-service">
+				<label for="s1"><i class="fa fa-search" aria-hidden="true"></i></label>
+				<input id="s1" type="search" placeholder="Пошук послуг банку">
+			</div>
+			<div class="change-lang">
+				<select name="" id="" size="1">
+					<option value="" >українська</option>
+					<option value="">english</option>
+					<option value="">русская</option>
+				</select>
+			</div>
+			
+			<div class="size-allfont">
+				<div class="font-minus">
+					<i class="fa fa-font" aria-hidden="true"></i>
+					<i class="fa fa-minus" aria-hidden="true"></i>
+				</div>
+				<div class="font-plus">
+					<i class="fa fa-font" aria-hidden="true"></i>
+					<i class="fa fa-plus" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div>
+	</header>
+	<aside>
+		<div class="title">Ощадбанк 24/7</div>
+		<div class="login">
+			<i class="el el-key"></i>
+			<span>Увійти до Веб-банкінгу</span>
+		</div/>
+		<div class="services">
+			<div class="main-services">
+				<span>Про Ощад 24/7</span>
+				<span>Мобільні додатки</span>
+			</div>
+			<br>
+			<span class="submenu">інші послуги</span>
+			<div class="different-services">
+				<span>Комунальні послуги</span>
+				<span>Платежі по рахунках</span>
+				<span>Сплата штрафів</span>
+				<span>Переказ коштів</span>
+				<span>Придбати квитки</span>
+				<span>Поповнити мобільний</span>
+			</div>
+			<br>
+		</div>
+		<div class="sections">
+			<i class="fa fa-map-marker" aria-hidden="true"></i>
+			<span>Відділення та банкомати</span>
+		</div>
+		<div class="contacts">
+			<span class="title-contacts">контакт-центр</span>
+			<div>
+				<i class="fa fa-phone" aria-hidden="true"></i>
+				<span class="telephone">0 800 210 800</span>
+			</div>
+			
+		</div>
+		<div class="online-help">
+			<i class="fa fa-comments" aria-hidden="true"></i>
+			<span>Онлайн-помічник</span>
+		</div>
+	</aside>
+	<main>
+		<div class="navigation">
+			<div class="menu">
+				<ul> 
+					<li>Депозити</li>
+					<li>Кредити
+						<ul>
+							<div>
+								<li>Державні програми</li>
+								<li>Енергокредит</li>
+								<li>Кредити від Ощадбанку</li>
+								<li>На авто</li>
+								<li>На житло <span>(на вторинному ринку)</span></li>
+								<li>Кредитні картки</li>
+								<li>Споживчі кредити під іпотеку</li>
+								<li>Під заставу грошей на депозиті</li>
+								<li>Кредитування під поруку</li>
+								<li>Програма перекридитування</li>
+								<!-- <input type="submit">Кредитний канкулятор -->
+							</div>
+						</ul>
+					</li>
+					<li>Картки та рахунки
+						<ul>
+							<div>
+								<li>Платіжні картки</li>
+								<li>Стандартна</li>
+								<li>Економна</li>
+								<li>Національна</li>
+								<li>Універсальна</li>
+								<li>Студентська</li>
+								<li>Пенсійна</li>
+								<li>Зарплатна</li>
+								<li>Соціальна</li>
+							</div>
+						</ul>
+					</li>
+					 <li>Платежі</li>
+					 <li>Перекази</li>
+					 <li>Інші розділи</li>
+				</ul>
+			</div>
+		</div>
+		<section class="main-slider">
+			<div class="slider">
+				<img src="img/site-logo.png" alt="">
+				<ul>
+				<li><h2>депозит довіра</h2></li>
+				<li>₴<i class="fa fa-usd" aria-hidden="true"></i></li>
+				<li>Можливість дострокового зняття</li>
+				<li>Поповнення лише один раз</li>
+				<li>Виплата відсотків наприкінці терміну</li>
+				<li>Мінімальна сума депозиту</li>
+				<li>10000 UAH</li>
+				</ul>
+			</div>
+			<div class="additional-info">
+				<p>Усі депозити населення, розміщені в Ощадбанку захищені державою, незалежно від суми</p>
+			</div>
+		</section>
+		<section class="table" >
+			<table>
+				<caption>
+					<h2>відсоткові ставки</h2>
+					<select name="" id="selectedCurrency" size="1">
+						<option value="" currency="UAH" class="selected activeCurrency" checked>₴    у гривні</option>
+						<option value="" currency="USD" class="activeCurrency"><i class="fa fa-usd" aria-hidden="true"></i>у доларах</option>
+						<option value="" currency="EUR" class="activeCurrency"><i class="fa fa-eur" aria-hidden="true"></i>у євро</option>
+					</select>
+					<span>на 10.11.2015</span>
+				</caption>
+				
+				<tr >
+					<th></th>
+					<th data-currency="UAH">від 100 ₴</th>
+					<!-- <th data-currency="USD">від 100<i class="fa fa-usd" aria-hidden="true"></i></th>
+					<th data-currency="EUR">від 100<i class="fa fa-eur" aria-hidden="true"></i></th> -->
+					<th data-currency="UAH">від 1000 ₴</th>
+					<!-- <th data-currency="USD">від 1000<i class="fa fa-usd" aria-hidden="true"></i></th>
+					<th data-currency="EUR">від 1000<i class="fa fa-eur" aria-hidden="true"></i></th> -->
+					<th data-currency="UAH">від 3000 ₴</th>
+					<!-- <th data-currency="USD">від 3000<i class="fa fa-usd" aria-hidden="true"></i></th>
+					<th data-currency="EUR">від 3000<i class="fa fa-eur" aria-hidden="true"></i></th -->>
+					<th data-currency="UAH">від 5000 ₴</th>
+					<!-- <th data-currency="USD">від 5000<i class="fa fa-usd" aria-hidden="true"></i></th>
+					<th data-currency="EUR">від 5000<i class="fa fa-eur" aria-hidden="true"></i></th> -->
+					<th data-currency="UAH">від 10000 ₴</th>
+					<!-- <th data-currency="USD">від 10000<i class="fa fa-usd" aria-hidden="true"></i></th>
+					<th data-currency="EUR">від 10000<i class="fa fa-eur" aria-hidden="true"></i></th> -->
+				</tr>
+				<tr>
+					<td>1 тиждень</td>
+					<td data-currency="UAH">18%</td><!-- <td data-currency="USD">18%</td><td data-currency="EUR">18%</td> -->
+					<td data-currency="UAH">18.5%</td><!-- <td data-currency="USD">19.5%</td><td data-currency="EUR">18.3%</td> -->
+					<td data-currency="UAH">19%</td><!-- <td data-currency="USD">19.6%</td><td data-currency="EUR">18.4%</td> -->
+					<td data-currency="UAH">19.5%</td><!-- <td data-currency="USD">20%</td><td data-currency="EUR">18.4%</td> -->
+					<td data-currency="UAH">20.5%</td><!-- <td data-currency="USD">20.2%</td><td data-currency="EUR">18.4%</td> -->
+				</tr>
+				<tr>
+					<td>2 тижні</td>
+					<td data-currency="UAH">18%</td><!-- <td data-currency="USD">18%</td><td data-currency="EUR">19%</td> -->
+					<td data-currency="UAH">18.5%</td><!-- <td data-currency="USD">18.3%</td><td data-currency="EUR">19.5%</td> -->
+					<td data-currency="UAH">19.5%</td><!-- <td data-currency="USD">18.4%</td><td data-currency="EUR">20%</td> -->
+					<td data-currency="UAH">19.3%</td><!-- <td data-currency="USD">18.5%</td><td data-currency="EUR">20.2%</td> -->
+					<td data-currency="UAH">20.5%</td><!-- <td data-currency="USD">18.6%</td><td data-currency="EUR">20.5%</td> -->
+				</tr>
+				<tr>
+					<td>1 місяць</td>
+					<td data-currency="UAH">18%</td><!-- <td data-currency="USD">18%</td><td data-currency="EUR">19%</td> -->
+					<td data-currency="UAH">18.5%</td><!-- <td data-currency="USD">18.3%</td><td data-currency="EUR">19.5%</td> -->
+					<td data-currency="UAH">19%</td><!-- <td data-currency="USD">18.4%</td><td data-currency="EUR">20%</td> -->
+					<td data-currency="UAH">19.5%</td><!-- <td data-currency="USD">18.5%</td><td data-currency="EUR">20.2%</td> -->
+					<td data-currency="UAH">20.5%</td><!-- <td data-currency="USD">18.6%</td><td data-currency="EUR">20.5%</td> -->
+				</tr>
+				<tr>
+					<td>2 місяці</td>
+					<td data-currency="UAH">18%</td><!-- <td data-currency="USD">18%</td><td data-currency="EUR">19%</td> -->
+					<td data-currency="UAH">18.5%</td><!-- <td data-currency="USD">18.3%</td><td data-currency="EUR">19.5%</td> -->
+					<td data-currency="UAH">20%</td><!-- <td data-currency="USD">18.4%</td><td data-currency="EUR">20%</td> -->
+					<td data-currency="UAH">19.5%</td><!-- <td data-currency="USD">18.5%</td><td data-currency="EUR">20.2%</td> -->
+					<td data-currency="UAH">20.5%</td><!-- <td data-currency="USD">18.6%</td><td data-currency="EUR">20.5%</td> -->
+				</tr>
+				<tr>
+					<td>6 місяців</td>
+					<td data-currency="UAH">18%</td><!-- <td data-currency="USD">18%</td><td data-currency="EUR">19%</td> -->
+					<td data-currency="UAH">18.5%</td><!-- <td data-currency="USD">18.3%</td><td data-currency="EUR">19.5%</td> -->
+					<td data-currency="UAH">20.2%</td><!-- <td data-currency="USD">18.4%</td><td data-currency="EUR">20%</td> -->
+					<td data-currency="UAH">19.5%</td><!-- <td data-currency="USD">18.5%</td><td data-currency="EUR">20.2%</td> -->
+					<td data-currency="UAH">20.5%</td><!-- <td data-currency="USD">18.6%</td><td data-currency="EUR">20.5%</td> -->
+				</tr> 
+			</table>
+			<button type="submit">порівняти з іншими депозитами</button>
+		</section>
+		<section class="loyalty-program">
+			<h2>програма лояльності</h2>
+			<p>У відділеннях банку, де відкрито Ваш рахунок Ви можете оформити довіреність на право розпорядження коштами або заповідальне розпорядження. Вартість послуги складає до 15 гривень, а для пенсіонерів - <span>безкоштовно</span>.</p>
+			<ul>
+				<li><i class="el el-ok"></i>Готівкою через касу</li>
+				<li><i class="el el-ok"></i>За допомогою платіжної картки</li>
+				<li><i class="el el-ok"></i>Без відвідування відділення Банку, отримувати проценти та розпоряджатися коштами</li>
+			</ul>
+		</section>
+		<section class="info">
+			<div class="info-deposit">
+				<h2>як відкрити депозит?</h2>
+				<p> 
+					Щоб оформити депозит треба звернутися до найближчого відділення Ощадбанку, маючи при собі наступні документи: 
+					<br><br>
+					<b><i class="fa fa-minus" aria-hidden="true"></i>паспорт</b><br>
+					<b> <i class="fa fa-minus" aria-hidden="true"></i>довідку про присвоєння індефікаційного номеру</b>
+					<br><br>
+					За додатковою інформацією можна <u>звертатися до служби підтримки</u> банку онлайн, заповнити онлайн-заявку нижче, або звертатися за телефоном:<br><br>
+					 <span><i class="fa fa-phone" aria-hidden="true"></i>+380 44 363-01-33</span>
+				</p>
+			</div>
+			<div class="map">
+				
+			</div>
+		</section>
+		<section class="useful-info">
+			<h2>інформація, що стане в нагоді</h2>
+			<h3>Як відбувається зарахування коштів?</h3>
+			<ul>
+				<li><i class="el el-ok"></i>Готівкою через касу, в день відкриття депозиту</li>
+				<li><i class="el el-ok"></i>Безготівкове зарахування</li>
+			</ul>
+			<h3>Як оформлюється довіреність?</h3>
+			<p>У відділені банку, де відкрито Ваш рахунок Ви можете оформити довіреність на право розпорядження коштами або заповідальне розпорядження. Вартість послуги складає до 15 гривень, а для пенсіонерів - <span>безкоштовно</span>.</p>
+			<h3>Як здійснюється отримання процентів та повернення вкладу?</h3>
+			<ul>
+				<li><i class="el el-ok"></i>Готівкою через касу</li>
+				<li><i class="el el-ok"></i>За допомогою платіжної картки</li>
+				<li><i class="el el-ok"></i>Без відвідування відділення Банку, отримувати проценти та розпоряджатися коштами</li>
+			</ul>
+		</section>
+		<section class="application">
+			<div>
+				<h2>заповнити онлайн заявку</h2>
+				<button type="submit" class="checked">консультація</button>
+				<button type="submit">попереднє оформлення</button>
+				<p>Після заповнення заявки, з вами зв'яжеться працівник нашого банку та допоможе з подальшим оформленням депозиту.</p>
+				<form action="">
+					<select name="" id="" size="1">
+						<option value="">Оберіть Ваше місто</option>
+						<option value="">Київ</option>
+						<option value="">Одеса</option>
+						<option value="">Харків</option>
+					</select>
+					<input type="text" name="UserSurname" placeholder="ПІБ">
+					<input type="email" placeholder="E-mail">
+					<input type="tel" placeholder="Контактний номер телефону">
+					<input type="submit" value="Відправити заявку">
+				</form>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div class="wrapper-footer">
+			<div class="helpful-link">
+				<div class="title-helpful-link">
+					<span>корисні посилання</span>
+				</div>
+				<div class="different-services">
+					<span>Відділеня та банкомати</span>
+					<span>Оплата комунальних послуг</span>
+					<span>Поповнення мобільного</span>
+					<span>Контакти</span>
+					<span>Мобільні додатки</span>
+				</div>
+				<span class="mark">ОЩАДБАНК, від 1991</span>
+				<span class="license">Ліцензія Національного банку України №48 від 05.10.2011</span>
+			</div>
+			<div class="info-contact ">
+				<span>контакт-центр ощадбанку</span>
+				<span>0800210800</span>
+				<span>безкоштовно зі стаціонарних та 'мобільних телефонів з території України</span>
+				<span>+380 44 363-01-33</span>
+			</div>
+			<div class="footer-link">
+				<span>ощадбанк у соціальних мережах</span>
+				<i class="fa fa-facebook-official" aria-hidden="true"></i>
+				<i class="fa fa-instagram" aria-hidden="true"></i>
+				<i class="fa fa-twitter-square" aria-hidden="true"></i>
+				<i class="fa fa-youtube-play" aria-hidden="true"></i>
+			</div>
+		</div>
+	</footer>
+	<script   src="https://code.jquery.com/jquery-3.1.1.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>	

@@ -1,0 +1,289 @@
+main
+	font-family: 'Roboto', sans-serif
+	.navigation
+		width: 100%
+		height: 72px
+		.menu
+			width: 1000px
+			float: right
+			ul 
+				list-style: none
+				display: block
+				text-align: right
+				width: 100%
+				box-sizing: border-box
+				li
+					display: inline-block
+					width: 100px
+					height: 50px
+					&:hover
+						ul
+							div
+								// display: block
+					ul
+						div
+							display: none
+	.main-slider
+		height: 529px
+		position: relative
+		.slider
+			background: #7196da
+			width: calc(100% - 260px)
+			position: absolute
+			box-sizing: border-box
+			img
+				position: absolute
+				top: -52px
+				left: 40px
+				width: 209px
+				height: 104px
+			ul
+				list-style: none
+				margin: 0
+				padding-left: 60px
+				li
+					h2
+						font-size: 5.285rem
+						color:#fff
+						padding-top: 80px
+						font-weight: 600
+						margin: 0
+					&:nth-child(2)
+						font-size: 1.571rem
+						color:#fff
+						padding-top: 40px
+						font-weight: 600
+						i 
+							padding-left: 30px
+					&:nth-child(3)
+						font-size: 1rem
+						color:#fff
+						font-weight: 600
+						padding-top: 30px
+					&:nth-child(4), &:nth-child(5)
+						font-size: 1rem
+						color:#465f8c
+						font-weight: 600
+						padding-top: 20px
+					&:nth-child(6)
+						color: #b8c8eb
+						font-size: 0.785rem
+						padding-top: 30px
+					&:last-child
+						color: #fff
+						font-size: 1.571rem
+						padding-top: 10px
+						font-weight: 600
+						padding-bottom: 100px
+		.additional-info
+			width: 354px
+			height: 112px
+			position: absolute
+			bottom: -20px
+			right: 280px
+			background: #dcdf3c
+			font-size: 1.142rem
+			font-weight: 500
+			p 
+				margin: 0
+				padding-left: 25px
+				padding-top: 20px
+				line-height: 25px
+	.table 
+		height: 450px
+		width: calc(100% - 360px)
+		table 
+			padding-left: 60px
+			width: 875px
+			caption
+				text-align: left
+				padding-left: 60px
+				padding-top: 50px
+				h2
+					margin: 0
+					font-weight: 600
+					font-size: 2rem
+					display: inline-block
+					padding-right: 22px
+				select
+					display: inline-block
+					width: 136px
+					height: 36px
+					border: 2px solid #7196da
+					background: transparent
+					option 
+						i 
+							color: black
+				span
+					display: block
+					font-size: 0.714rem
+			tr
+				padding-bottom: 20px
+				height: 40px
+				th 
+					color: #bdbdbd
+					font-size: 0.714rem
+					padding-bottom: 20px
+
+				td 
+					text-align: center
+					&:first-child
+						text-align: left
+		button
+			width: 320px
+			height: 48px
+			margin-top: 40px
+			text-indent: 30px
+			margin-left: 60px
+			border: 2px solid #7196da
+			background: transparent
+	.loyalty-program
+		padding-left: 60px
+		padding-top: 88px
+		padding-bottom: 100px
+		h2
+			margin: 0
+			font-weight: 600
+			font-size: 2rem
+		p 
+			padding-top: 33px
+			font-size: 1rem
+			max-width: 434px
+			margin: 0
+			line-height: 23px
+			span
+				text-transform: uppercase
+		ul
+			list-style: none
+			font-size: 1rem
+			margin: 0
+			padding-left: 0px
+			padding-top: 25px
+			line-height: 23px
+			i 
+				padding-right: 10px
+	.info
+		width: calc(100% - 260px)
+		height: 489px
+		.info-deposit
+			width: 50%
+			padding-left: 60px
+			background: #7196da
+			float: left
+			display: inline-block
+			h2
+				font-weight: 600
+				font-size: 2rem
+				color: white
+				margin: 0
+				padding-top: 60px
+				padding-bottom: 50px
+			p 
+				font-size: 1rem
+				max-width: 510px
+				margin: 0
+				line-height: 23px
+				color: white
+				padding-bottom: 114px
+				i 
+					padding-right: 10px
+				span 
+					font-size: 1.5rem
+					font-weight: 600
+
+		.map 
+			width: 40%
+			background: #eee
+			float: left
+			display: inline-block
+			height: 488px
+			clear:right
+	.useful-info
+		padding-left: 60px
+		padding-top: 88px
+		padding-bottom: 60px
+		width: calc(100% - 260px)
+		height: 474px
+		h2
+			padding-left: 0
+			margin: 0
+			font-weight: 600
+			font-size: 2rem
+			padding-bottom: 30px
+		h3
+			margin: 0
+			font-weight: 600
+			font-size: 1.2rem
+			padding-bottom: 15px
+		p 
+			// padding-top: 33px
+			font-size: 1rem
+			max-width: 434px
+			margin: 0
+			line-height: 23px
+			padding-bottom: 30px
+
+			span
+				text-transform: uppercase
+		ul
+			list-style: none
+			font-size: 1rem
+			margin: 0
+			padding-left: 0px
+			line-height: 23px
+			padding-bottom: 30px
+			i 
+				padding-right: 10px
+	.application
+		width: calc(100% - 260px)
+		height: 680px
+		background: #f8f8e7
+		border: 1px solid #ebeb88
+		div
+			width: 550px 
+			margin: auto
+			margin-top: 60px
+			h2
+				padding-left: 0
+				margin: 0
+				font-weight: 600
+				font-size: 2rem
+				padding-bottom: 30px
+			button
+				height: 44px 
+				margin: 0
+				text-align: center
+				border: 2px solid #dcdf3c
+				background: white
+				margin-bottom: 43px
+				&:first-child
+					width: 150px
+				&:last-child
+					width: 200px
+			.checked
+				background: #dcdf3c
+			p 
+				padding-bottom: 40px
+				font-size: 1rem
+				max-width: 540px
+				margin: 0
+				line-height: 23px
+			select, input
+				width: 540px
+				height: 48px
+				text-indent: 10px
+				display: block
+				padding: 0
+				margin-bottom: 20px
+				background: transparent
+				border: 2px solid #c6c6b9
+			// input
+			// 	&:placeholder
+			// 		color: black
+			input[type="submit"]
+				border: 2px solid #dcdf3c
+				background: white
+
+
+
+
