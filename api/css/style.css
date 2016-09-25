@@ -3,11 +3,13 @@ aside {
   height: -webkit-calc(100% - 48px);
   height: calc(100% - 48px);
   background: #212628;
-  float: right;
   font-family: 'Roboto', sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   clear: both;
+  position: fixed;
+  right: 0;
+  z-index: 2;
 }
 
 aside:after {
@@ -18,8 +20,16 @@ aside:after {
   height: 1px;
 }
 
-aside .title {
+aside .services {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+aside .services .title {
+  display: block;
   height: 60px;
+  width: 100%;
   text-transform: uppercase;
   color: #4b5153;
   line-height: 60px;
@@ -29,99 +39,144 @@ aside .title {
   border-bottom: #2f3335 solid 1px;
 }
 
-aside .login {
-  color: #dcdf3c;
+aside .services .login {
   height: 45px;
-  line-height: 45px;
+  line-height: 50px;
   border-bottom: #2f3335 solid 1px;
   cursor: pointer;
-  -webkit-transition: background, color, 1s, easy-in-out;
-  transition: background, color, 1s, easy-in-out;
+  -webkit-transition: background, 0.2s, easy-in-out;
+  transition: background, 0.2s, easy-in-out;
+  display: block;
 }
 
-aside .login i {
-  padding-left: 14px;
-  padding-right: 15px;
-  font-size: 1rem;
+aside .services .login a {
+  text-decoration: none;
+  width: 100%;
+  background: url("../img/dashboard-sprites.png") no-repeat;
+  background-position: 0px 0px;
+  display: inline-block;
+  padding-left: 40px;
+  color: #dcdf3c;
+  -webkit-transition: color, 0.2s, easy-in-out;
+  transition: color, 0.2s, easy-in-out;
 }
 
-aside .login:hover {
+aside .services .login:hover {
   background: #dcdf3c;
+}
+
+aside .services .login:hover a {
+  background-position: 0px -50px;
   color: black;
 }
 
-aside .services {
+aside .services .about-bank a {
+  width: 100%;
+  text-decoration: none;
   color: #fff;
   line-height: 28px;
   font-size: 0.928rem;
-  border-bottom: #2f3335 solid 1px;
+  border-left: #b99dc4 solid 6px;
+  padding-left: 40px;
+  display: block;
+  background-image: -webkit-gradient(linear, right top, left top, from(transparent), color-stop(50%, transparent), color-stop(50%, #b99dc4), color-stop(50%, #b99dc4));
+  background-image: -webkit-linear-gradient(right, transparent, transparent 50%, #b99dc4 50%, #b99dc4);
+  background-image: linear-gradient(to left, transparent, transparent 50%, #b99dc4 50%, #b99dc4);
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  -webkit-transition: all .25s ease-in;
+  transition: all .25s ease-in;
 }
 
-aside .services .submenu {
+aside .services .about-bank a:hover {
+  background-position: 0 0;
+}
+
+aside .submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  line-height: 30px;
+  font-size: 0.928rem;
+  border-bottom: #2f3335 solid 1px;
+  display: block;
+}
+
+aside .submenu .other-services {
   font-size: 0.857rem;
-  font-weight: 600;
+  font-weight: 60;
   color: #4b5153;
   padding-left: 46px;
 }
 
-aside .services .main-services {
-  border-left: #b99dc4 solid 6px;
-}
-
-aside .services .main-services span {
+aside .submenu li a {
+  width: 100%;
+  text-decoration: none;
   padding-left: 40px;
   display: block;
-  cursor: pointer;
-  -webkit-transition: background, 1s, easy-in-out;
-  transition: background, 1s, easy-in-out;
-}
-
-aside .services .main-services span:hover {
-  background: #b99dc4;
-}
-
-aside .services .different-services {
   border-left: #fbaa69 solid 6px;
+  color: white;
+  background-image: -webkit-gradient(linear, right top, left top, from(transparent), color-stop(50%, transparent), color-stop(50%, #fbaa69), color-stop(50%, #fbaa69));
+  background-image: -webkit-linear-gradient(right, transparent, transparent 50%, #fbaa69 50%, #fbaa69);
+  background-image: linear-gradient(to left, transparent, transparent 50%, #fbaa69 50%, #fbaa69);
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  -webkit-transition: all .25s ease-in;
+  transition: all .25s ease-in;
 }
 
-aside .services .different-services span {
-  padding-left: 40px;
-  display: block;
-  cursor: pointer;
-  -webkit-transition: background, 1s, easy-in-out;
-  transition: background, 1s, easy-in-out;
+aside .submenu li a:hover {
+  background-position: 0 0;
 }
 
-aside .services .different-services span:hover {
-  background: #fbaa69;
+aside .submenu li:nth-child(7) {
+  border-bottom: #2f3335 solid 1px;
 }
 
-aside .sections {
+aside .submenu li:nth-child(8) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   height: 45px;
   line-height: 45px;
-  color: #dcdf3c;
   border-bottom: #2f3335 solid 1px;
-  cursor: pointer;
-  -webkit-transition: background, color, 1s, easy-in-out;
-  transition: background, color, 1s, easy-in-out;
+  -webkit-transition: background, 0.2s, easy-in-out;
+  transition: background, 0.2s, easy-in-out;
 }
 
-aside .sections i {
-  padding-left: 14px;
-  padding-right: 15px;
-  font-size: 1rem;
+aside .submenu li:nth-child(8) a {
+  width: 100%;
+  text-decoration: none;
+  border: none;
+  color: #dcdf3c;
+  background: url("../img/dashboard-sprites.png") no-repeat;
+  background-position: 0px -103px;
+  display: inline-block;
+  -webkit-transition: color, 0.2s, easy-in-out;
+  transition: color, 0.2s, easy-in-out;
 }
 
-aside .sections:hover {
+aside .submenu li:nth-child(8):hover {
   background: #dcdf3c;
   color: black;
 }
 
+aside .submenu li:nth-child(8):hover a {
+  color: black;
+  background-position: 0px -153px;
+}
+
 aside .contacts {
-  height: 45px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
   line-height: 25px;
-  height: 70px;
-  padding-top: 112px;
+  height: 100px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 240px;
 }
 
 aside .contacts .title-contacts {
@@ -131,53 +186,51 @@ aside .contacts .title-contacts {
   padding-left: 40px;
 }
 
-aside .contacts div i {
-  color: #dcdf3c;
-  padding-left: 14px;
-  padding-right: 10px;
-  font-size: 1.286rem;
-}
-
-aside .contacts div .telephone {
+aside .contacts .telephone {
   color: white;
   font-size: 1.571rem;
   font-weight: 600;
+  padding-left: 40px;
+  background: url("../img/dashboard-sprites.png") no-repeat;
+  background-position: 0px -215px;
 }
 
-aside .online-help {
+aside .contacts .online-help {
   background: #161a1b;
   height: 50px;
   line-height: 50px;
-  color: white;
   font-size: 1.142rem;
-  cursor: pointer;
-  -webkit-transition: background, color, 1s, easy-in-out;
-  transition: background, color, 1s, easy-in-out;
+  -webkit-transition: background, 0.5s, easy-in-out;
+  transition: background, 0.5s, easy-in-out;
 }
 
-aside .online-help i {
-  color: #dcdf3c;
-  padding-left: 14px;
-  padding-right: 10px;
-  font-size: 1.286rem;
-  -webkit-transition: color, 1s, easy-in-out;
-  transition: color, 1s, easy-in-out;
+aside .contacts .online-help a {
+  width: 100%;
+  text-decoration: none;
+  background: url("../img/dashboard-sprites.png") no-repeat;
+  background-position: 0px -315px;
+  color: white;
+  padding-left: 40px;
+  -webkit-transition: color, 0.2s, easy-in-out;
+  transition: color, 0.2s, easy-in-out;
 }
 
-aside .online-help:hover {
+aside .contacts .online-help:hover {
   background: #dcdf3c;
-  color: black;
 }
 
-aside .online-help:hover i {
+aside .contacts .online-help:hover a {
   color: black;
+  background-position: 0px -366px;
 }
 
-aside .online-help:active {
+aside .contacts .online-help:active {
   background: #c2c52e;
 }
 main {
   font-family: 'Roboto', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 main .navigation {
@@ -187,7 +240,7 @@ main .navigation {
 
 main .navigation .menu {
   width: 1000px;
-  float: right;
+  right: -240px;
 }
 
 main .navigation .menu ul {
@@ -214,7 +267,10 @@ main .main-slider {
   position: relative;
 }
 
-main .main-slider .slider {
+main .main-slider .slider-1 .slider,
+main .main-slider .slider-2 .slider,
+main .main-slider .slider-3 .slider,
+main .main-slider .slider-4 .slider {
   background: #7196da;
   width: -webkit-calc(100% - 260px);
   width: calc(100% - 260px);
@@ -223,7 +279,10 @@ main .main-slider .slider {
           box-sizing: border-box;
 }
 
-main .main-slider .slider img {
+main .main-slider .slider-1 .slider img,
+main .main-slider .slider-2 .slider img,
+main .main-slider .slider-3 .slider img,
+main .main-slider .slider-4 .slider img {
   position: absolute;
   top: -52px;
   left: 40px;
@@ -231,58 +290,66 @@ main .main-slider .slider img {
   height: 104px;
 }
 
-main .main-slider .slider ul {
-  list-style: none;
-  margin: 0;
-  padding-left: 60px;
-}
-
-main .main-slider .slider ul li h2 {
+main .main-slider .slider-1 .slider h2,
+main .main-slider .slider-2 .slider h2,
+main .main-slider .slider-3 .slider h2,
+main .main-slider .slider-4 .slider h2 {
   font-size: 5.285rem;
   color: #fff;
   padding-top: 80px;
   font-weight: 600;
   margin: 0;
+  padding-left: 60px;
 }
 
-main .main-slider .slider ul li:nth-child(2) {
-  font-size: 1.571rem;
+main .main-slider .slider-1 .slider p,
+main .main-slider .slider-2 .slider p,
+main .main-slider .slider-3 .slider p,
+main .main-slider .slider-4 .slider p {
+  font-size: 1rem;
   color: #fff;
   padding-top: 40px;
   font-weight: 600;
+  padding-bottom: 100px;
+  padding-left: 60px;
+  margin: 0;
+  line-height: 26px;
 }
 
-main .main-slider .slider ul li:nth-child(2) i {
+main .main-slider .slider-1 .slider p span:first-child,
+main .main-slider .slider-2 .slider p span:first-child,
+main .main-slider .slider-3 .slider p span:first-child,
+main .main-slider .slider-4 .slider p span:first-child {
+  font-size: 1.571rem;
+}
+
+main .main-slider .slider-1 .slider p span:first-child i,
+main .main-slider .slider-2 .slider p span:first-child i,
+main .main-slider .slider-3 .slider p span:first-child i,
+main .main-slider .slider-4 .slider p span:first-child i {
   padding-left: 30px;
 }
 
-main .main-slider .slider ul li:nth-child(3) {
-  font-size: 1rem;
-  color: #fff;
-  font-weight: 600;
-  padding-top: 30px;
+main .main-slider .slider-1 .slider p span:last-child,
+main .main-slider .slider-2 .slider p span:last-child,
+main .main-slider .slider-3 .slider p span:last-child,
+main .main-slider .slider-4 .slider p span:last-child {
+  font-size: 1.571rem;
 }
 
-main .main-slider .slider ul li:nth-child(4),
-main .main-slider .slider ul li:nth-child(5) {
-  font-size: 1rem;
+main .main-slider .slider-1 .slider p .other-color,
+main .main-slider .slider-2 .slider p .other-color,
+main .main-slider .slider-3 .slider p .other-color,
+main .main-slider .slider-4 .slider p .other-color {
   color: #465f8c;
-  font-weight: 600;
-  padding-top: 20px;
 }
 
-main .main-slider .slider ul li:nth-child(6) {
+main .main-slider .slider-1 .slider p .other-size,
+main .main-slider .slider-2 .slider p .other-size,
+main .main-slider .slider-3 .slider p .other-size,
+main .main-slider .slider-4 .slider p .other-size {
   color: #b8c8eb;
   font-size: 0.785rem;
-  padding-top: 30px;
-}
-
-main .main-slider .slider ul li:last-child {
-  color: #fff;
-  font-size: 1.571rem;
-  padding-top: 10px;
-  font-weight: 600;
-  padding-bottom: 100px;
 }
 
 main .main-slider .additional-info {
@@ -521,6 +588,7 @@ main .application div {
   width: 550px;
   margin: auto;
   margin-top: 60px;
+  font-size: 0;
 }
 
 main .application div h2 {
@@ -533,6 +601,7 @@ main .application div h2 {
 
 main .application div button {
   height: 44px;
+  font-size: 1rem;
   margin: 0;
   text-align: center;
   border: 2px solid #dcdf3c;
@@ -570,11 +639,96 @@ main .application div input {
   margin-bottom: 20px;
   background: transparent;
   border: 2px solid #c6c6b9;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+main .application div input::-webkit-input-placeholder {
+  color: black;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 main .application div input[type="submit"] {
   border: 2px solid #dcdf3c;
   background: white;
+}
+
+main .master-card {
+  width: -webkit-calc(100% - 260px);
+  width: calc(100% - 260px);
+  height: 300px;
+  background: #5bdcaa;
+  padding-left: 60px;
+  padding-top: 50px;
+  margin-top: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: white;
+  position: relative;
+}
+
+main .master-card h2 {
+  padding-left: 0;
+  margin: 0;
+  font-weight: 600;
+  font-size: 2.7rem;
+  padding-bottom: 30px;
+}
+
+main .master-card p {
+  padding-bottom: 70px;
+  margin: 0;
+}
+
+main .master-card .logo-master-card {
+  width: 153px;
+  position: absolute;
+  bottom: 15px;
+}
+
+main .master-card .picture-1 {
+  width: 250px;
+  right: 90px;
+  position: absolute;
+  bottom: 0px;
+}
+
+main .credit-program {
+  width: -webkit-calc(100% - 260px);
+  width: calc(100% - 260px);
+  height: 300px;
+  background: #ebb641;
+  padding-left: 60px;
+  padding-top: 40px;
+  margin-top: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: white;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+main .credit-program h2 {
+  padding-left: 0;
+  margin: 0;
+  font-weight: 600;
+  font-size: 2.7em;
+  padding-bottom: 30px;
+}
+
+main .credit-program p {
+  padding-bottom: 70px;
+  margin: 0;
+  line-height: 23px;
+}
+
+main .credit-program img {
+  width: 250px;
+  right: 75px;
+  position: absolute;
+  bottom: 0px;
 }
 
 footer {
@@ -730,7 +884,7 @@ header .other-type span:active {
 }
 
 header .setting {
-  padding-top: 13px;
+  font-family: 'PT Sans', sans-serif;
 }
 
 header .setting .search-service {
@@ -740,6 +894,11 @@ header .setting .search-service {
   float: right;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #161a1b;
+  line-height: 48px;
 }
 
 header .setting .search-service i {
@@ -758,46 +917,61 @@ header .setting .search-service input:focus {
   outline: none;
 }
 
-header .setting .change-lang {
-  float: right;
-  margin-right: 40px;
+header .setting .search-service input::-webkit-input-placeholder {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
-header .setting .change-lang select {
+header .setting .change-lang {
+  right: 240px;
+  position: absolute;
+}
+
+header .setting .change-lang .en,
+header .setting .change-lang .ru {
+  display: none;
+}
+
+header .setting .change-lang span {
+  display: block;
   width: 110px;
+  height: 48px;
+  line-height: 43px;
   background: transparent;
   color: #71797c;
-  border: none;
-  text-indent: 5px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  height: 48px;
+  text-indent: 14px;
 }
 
-header .setting .change-lang select:hover {
-  background: #dce123;
+header .setting .change-lang span:hover {
+  background: #dddf3c;
+  color: black;
 }
 
-header .setting .change-lang select:focus {
-  outline: none;
-}
-
-header .setting .change-lang select option {
-  background: #dce123;
-}
-
-header .setting .change-lang select option:focus {
-  background: #f4f750;
+header .setting .change-lang span:hover .en,
+header .setting .change-lang span:hover .ru {
+  display: block;
+  z-index: 2;
 }
 
 header .setting .size-allfont {
-  float: right;
-  margin-right: 40px;
   color: #929c9f;
   cursor: pointer;
+  right: 360px;
+  height: 48px;
+  position: absolute;
+  top: 9px;
+  height: 30px;
+  line-height: 30px;
 }
 
 header .setting .size-allfont .font-minus {
   display: inline-block;
-  -webkit-transition: color, 1s, easy-in-out;
-  transition: color, 1s, easy-in-out;
+  -webkit-transition: color, 0.5s, easy-in-out;
+  transition: color, 0.5s, easy-in-out;
 }
 
 header .setting .size-allfont .font-minus:hover {
@@ -805,20 +979,20 @@ header .setting .size-allfont .font-minus:hover {
 }
 
 header .setting .size-allfont .font-minus i {
-  font-size: 0.786rem;
+  font-size: 0.8rem;
 }
 
 header .setting .size-allfont .font-minus .fa-minus {
   display: none;
-  font-size: 0.571rem;
+  font-size: 0.41rem;
   position: relative;
   top: -7px;
 }
 
 header .setting .size-allfont .font-plus {
   display: inline-block;
-  -webkit-transition: color, 1s, easy-in-out;
-  transition: color, 1s, easy-in-out;
+  -webkit-transition: color, 1s, easy;
+  transition: color, 1s, easy;
 }
 
 header .setting .size-allfont .font-plus:hover {
@@ -826,7 +1000,7 @@ header .setting .size-allfont .font-plus:hover {
 }
 
 header .setting .size-allfont .font-plus .fa-font {
-  font-size: 1.143rem;
+  font-size: 1.4rem;
 }
 
 header .setting .size-allfont .font-plus .fa-plus {

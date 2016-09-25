@@ -7,7 +7,6 @@ header
 	height: 48px
 	background: #161a1b
 	font-family: 'Roboto', sans-serif
-
 	.other-type
 		width: 480px
 		height: 48px 
@@ -26,13 +25,18 @@ header
 			&:hover, &:active
 				color: #f4f750
 	.setting
-		padding-top: 13px
+		font-family: 'PT Sans', sans-serif
 		.search-service
 			width: 240px
 			height: 100% 
 			padding-left: 10px
 			float: right
 			box-sizing: border-box
+			position: fixed
+			top: 0
+			right: 0
+			background: #161a1b
+			line-height: 48px
 			i 
 				color: #dcdf3c
 				margin-right: 13px
@@ -43,47 +47,62 @@ header
 				font-size: 0.929rem
 				&:focus
 					outline: none
+			input::-webkit-input-placeholder
+				opacity: 1
+				transition: opacity 0.3s ease
 		.change-lang
-			float: right
-			margin-right: 40px
-			select
+			right: 240px
+			position: absolute
+			.en, .ru
+				display: none
+			span
+				display: block
 				width: 110px 
+				height: 48px
+				line-height: 43px
 				background: transparent
 				color: #71797c
-				border: none
-				text-indent: 5px
+				font-weight: 600
+				font-size: 1.2rem
+				height: 48px
+				text-indent: 14px
 				&:hover
-					background: #dce123
-				&:focus
-					outline: none
-				option 	
-					background: #dce123
-					&:focus
-						background: #f4f750
+					background: #dddf3c
+					color: black
+					.en, .ru
+						display: block
+						z-index: 2
+				// &:focus
+				// 	background: #f4f750
+				// 	color: black
 		.size-allfont
-			float: right
-			margin-right: 40px
 			color: #929c9f
 			cursor: pointer
+			right: 360px
+			height: 48px
+			position: absolute
+			top: 9px
+			height: 30px
+			line-height: 30px
 			.font-minus
 				display: inline-block
-				transition: color, 1s, easy-in-out
+				transition: color, 0.5s, easy-in-out
 				&:hover
 					color: #f4f750
 				i 
-					font-size: 0.786rem
+					font-size: 0.8rem
 				.fa-minus
 					display: none
-					font-size: 0.571rem
+					font-size: 0.41rem
 					position: relative
 					top: -7px
 			.font-plus
 				&:hover
 					color: #f4f750
 				display: inline-block
-				transition: color, 1s, easy-in-out
+				transition: color, 1s, easy
 				.fa-font 
-					font-size: 1.143rem 
+					font-size: 1.4rem 
 				.fa-plus
 					font-size: 0.714rem
 					position: relative

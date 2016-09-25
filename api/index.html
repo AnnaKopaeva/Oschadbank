@@ -7,8 +7,10 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/4.1.1/normalize.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/elusive-icons.min.css">
+	<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
 
 </head>
 <body>
@@ -24,11 +26,9 @@
 				<input id="s1" type="search" placeholder="Пошук послуг банку">
 			</div>
 			<div class="change-lang">
-				<select name="" id="" size="1">
-					<option value="" >українська</option>
-					<option value="">english</option>
-					<option value="">русская</option>
-				</select>
+				<span class="ua">українська</span>
+				<span class="en">english</span>
+				<span class="ru">русская</span>
 			</div>
 			
 			<div class="size-allfont">
@@ -44,44 +44,28 @@
 		</div>
 	</header>
 	<aside>
-		<div class="title">Ощадбанк 24/7</div>
-		<div class="login">
-			<i class="el el-key"></i>
-			<span>Увійти до Веб-банкінгу</span>
-		</div/>
-		<div class="services">
-			<div class="main-services">
-				<span>Про Ощад 24/7</span>
-				<span>Мобільні додатки</span>
-			</div>
+		<ul class="services">
+			<li class="title">Ощадбанк 24/7</li>
+			<li class="login"><a href="#">Увійти до Веб-банкінгу</a></li>
 			<br>
-			<span class="submenu">інші послуги</span>
-			<div class="different-services">
-				<span>Комунальні послуги</span>
-				<span>Платежі по рахунках</span>
-				<span>Сплата штрафів</span>
-				<span>Переказ коштів</span>
-				<span>Придбати квитки</span>
-				<span>Поповнити мобільний</span>
-			</div>
-			<br>
-		</div>
-		<div class="sections">
-			<i class="fa fa-map-marker" aria-hidden="true"></i>
-			<span>Відділення та банкомати</span>
-		</div>
-		<div class="contacts">
-			<span class="title-contacts">контакт-центр</span>
-			<div>
-				<i class="fa fa-phone" aria-hidden="true"></i>
-				<span class="telephone">0 800 210 800</span>
-			</div>
-			
-		</div>
-		<div class="online-help">
-			<i class="fa fa-comments" aria-hidden="true"></i>
-			<span>Онлайн-помічник</span>
-		</div>
+			<li class="about-bank"><a href="#">Про Ощад 24/7</a></li>
+			<li class="about-bank"><a href="#">Мобільні додатки</a></li>
+		</ul>
+		<ul class="submenu">
+			<li class="other-services">інші послуги</li>
+			<li><a href="#">Комунальні послуги</a></li>
+			<li><a href="#">Платежі по рахунках</a></li>
+			<li><a href="#">Сплата штрафів</a></li>
+			<li><a href="#">Переказ коштів</a></li>
+			<li><a href="#">Придбати квитки</a></li>
+			<li><a href="#">Поповнити мобільний</a></li>
+			<li><a href="#">Відділення та банкомати</a></li>
+		</ul>
+		<ul class="contacts">
+			<li class="title-contacts">контакт-центр</li>
+			<li class="telephone">0 800 210 800</li>
+			<li class="online-help"><a href="#">Онлайн-помічник</a></li>
+		</ul>
 	</aside>
 	<main>
 		<div class="navigation">
@@ -127,21 +111,51 @@
 			</div>
 		</div>
 		<section class="main-slider">
-			<div class="slider">
-				<img src="img/site-logo.png" alt="">
-				<ul>
-				<li><h2>депозит довіра</h2></li>
-				<li>₴<i class="fa fa-usd" aria-hidden="true"></i></li>
-				<li>Можливість дострокового зняття</li>
-				<li>Поповнення лише один раз</li>
-				<li>Виплата відсотків наприкінці терміну</li>
-				<li>Мінімальна сума депозиту</li>
-				<li>10000 UAH</li>
-				</ul>
+			<div class="slider-1">
+				<div class="slider">
+					<img src="img/site-logo.png" alt="">
+					<h2>депозит довіра</h2>
+					<br>
+					<p><span>₴<i class="fa fa-usd" aria-hidden="true"></i></span> <br><br>Можливість дострокового зняття<br><span class="other-color">Поповнення лише один раз<br>Виплата відсотків наприкінці терміну</span><br><br><span class="other-size">Мінімальна сума депозиту</span> <br><span>10000 UAH</span></p>
+				</div>
+				<div class="additional-info">
+					<p>Усі депозити населення, розміщені в Ощадбанку захищені державою, незалежно від суми</p>
+				</div>
 			</div>
-			<div class="additional-info">
-				<p>Усі депозити населення, розміщені в Ощадбанку захищені державою, незалежно від суми</p>
+			<div class="slider-2">
+				<div class="slider">
+					<img src="img/site-logo.png" alt="">
+					<h2>депозит довіра</h2>
+					<br>
+					<p><span>₴<i class="fa fa-usd" aria-hidden="true"></i></span> <br><br>Можливість дострокового зняття<br><span class="other-color">Поповнення лише один раз<br>Виплата відсотків наприкінці терміну</span><br><br><span class="other-size">Мінімальна сума депозиту</span> <br><span>10000 UAH</span></p>
+				</div>
+				<div class="additional-info">
+					<p>Усі депозити населення, розміщені в Ощадбанку захищені державою, незалежно від суми</p>
+				</div>
 			</div>
+			<div class="slider-3">
+				<div class="slider">
+					<img src="img/site-logo.png" alt="">
+					<h2>депозит довіра</h2>
+					<br>
+					<p><span>₴<i class="fa fa-usd" aria-hidden="true"></i></span> <br><br>Можливість дострокового зняття<br><span class="other-color">Поповнення лише один раз<br>Виплата відсотків наприкінці терміну</span><br><br><span class="other-size">Мінімальна сума депозиту</span> <br><span>10000 UAH</span></p>
+				</div>
+				<div class="additional-info">
+					<p>Усі депозити населення, розміщені в Ощадбанку захищені державою, незалежно від суми</p>
+				</div>
+			</div>
+			<div class="slider-4">
+				<div class="slider">
+					<img src="img/site-logo.png" alt="">
+					<h2>депозит довіра</h2>
+					<br>
+					<p><span>₴<i class="fa fa-usd" aria-hidden="true"></i></span> <br><br>Можливість дострокового зняття<br><span class="other-color">Поповнення лише один раз<br>Виплата відсотків наприкінці терміну</span><br><br><span class="other-size">Мінімальна сума депозиту</span> <br><span>10000 UAH</span></p>
+				</div>
+				<div class="additional-info">
+					<p>Усі депозити населення, розміщені в Ощадбанку захищені державою, незалежно від суми</p>
+				</div>
+			</div>
+		</div>
 		</section>
 		<section class="table" >
 			<table>
@@ -238,9 +252,7 @@
 					 <span><i class="fa fa-phone" aria-hidden="true"></i>+380 44 363-01-33</span>
 				</p>
 			</div>
-			<div class="map">
-				
-			</div>
+			<div class="map" id="map"></div>
 		</section>
 		<section class="useful-info">
 			<h2>інформація, що стане в нагоді</h2>
@@ -278,6 +290,17 @@
 				</form>
 			</div>
 		</section>
+		<section class="master-card">
+			<h2>гроші повертаються</h2>
+			<p>Акція для держателів безконтактних карток Master Card</p>
+			<img src="img/master-card.png" alt="" class="logo-master-card">
+			<img src="img/master-card-2.png" alt="" class="picture-1">
+		</section>
+		<section class="credit-program">
+			<h2>кредитна програма <br>"ощадний дім"</h2>
+			<p>Бережіть тепло та гроші <br><br> Державна кредитна програма на утеплення житла та модернізацію <br>опалювального обладнання.</p>
+			<img src="img/credit-program.png" alt="">
+		</section>
 	</main>
 	<footer>
 		<div class="wrapper-footer">
@@ -311,6 +334,8 @@
 		</div>
 	</footer>
 	<script   src="https://code.jquery.com/jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 	<script src="js/script.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDi1D5LcfExS5pVnTYDqArLKog8VOLV5P0&callback=initMap"></script>
 </body>
-</html>	
+</html>
