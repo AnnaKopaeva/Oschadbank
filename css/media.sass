@@ -1,0 +1,59 @@
+@media only screen and (max-width: 1024px) 
+	header
+		.setting
+			.change-lang
+				right: 60px
+			.size-allfont
+				right: 180px
+	aside
+		right: -192px
+		transition: right, 1s, easy
+		&:hover
+			right: 0
+			.services .search-service, .contacts
+				right: 0
+		.services 
+			.search-service
+				right: -192px
+				transition: right, 1s, easy
+				&:hover
+					right: 0
+					.contacts, aside
+						right: 0
+		.contacts
+			right: -192px
+			transition: right, 1s, easy
+			&:hover
+				right: 0
+				.services .search-service, aside
+					right: 0
+	main 
+		.navigation 
+			.menu
+				width: 900px
+		.slider, .table ,.loyalty-program, .useful-info, .application, .master-card, .credit-program
+			width: calc(100% - 60px)
+		.info 
+			width: calc(100% - 50px)
+			.map 
+				width: 31%
+		.useful-info 
+			height: 560px
+			p 
+				max-width: 585px
+@media only screen and (max-width: 1000px) 
+	header
+		.wrap-access-type
+			#input-access-type
+				display: block
+			.access-type
+			
+				span
+					width: 238px 
+					height: 48px
+					color: #dddf3c
+					font-size: 1.2rem
+					display: block
+		
+
+

@@ -15,16 +15,15 @@
 </head>
 <body>
 	<header>
-		<div class="other-type">
-			<span>Особистий</span>
-			<span>Малий та середній бізнес</span>
-			<span>Корпоративний</span>
+		<div class="wrap-access-type">
+			<input type="text" id="input-access-type" name="input" />
+			<div class="access-type">
+				<span class="chek-type">Особистий</span>
+				<span>Малий та середній бізнес</span>
+				<span>Корпоративний</span>
+			</div>
 		</div>
 		<div class="setting">
-			<div class="search-service">
-				<label for="s1"><i class="fa fa-search" aria-hidden="true"></i></label>
-				<input id="s1" type="search" placeholder="Пошук послуг банку">
-			</div>
 			<div class="change-lang">
 				<span class="ua">українська</span>
 				<span class="en">english</span>
@@ -45,6 +44,10 @@
 	</header>
 	<aside>
 		<ul class="services">
+			<li class="search-service">
+				<label for="s1"><i class="fa fa-search" aria-hidden="true"></i></label>
+				<input id="s1" type="search" placeholder="Пошук послуг банку">
+			</li>
 			<li class="title">Ощадбанк 24/7</li>
 			<li class="login"><a href="#">Увійти до Веб-банкінгу</a></li>
 			<br>
@@ -110,124 +113,135 @@
 				</ul>
 			</div>
 		</div>
-		<section class="main-slider">
-			<div class="slider-1">
-				<div class="slider">
-					<img src="img/site-logo.png" alt="">
+		<section class="slider">
+			<img src="img/site-logo.png" alt="" class="site-logo">
+			<div class="additional-info">
+				<p>Усі депозити населення, розміщені в Ощадбанку захищені державою, незалежно від суми</p>
+			</div>
+			<div class="main-slider">
+				<div class="proposal-1">
 					<h2>депозит довіра</h2>
-					<br>
+				 	<br>
 					<p><span>₴<i class="fa fa-usd" aria-hidden="true"></i></span> <br><br>Можливість дострокового зняття<br><span class="other-color">Поповнення лише один раз<br>Виплата відсотків наприкінці терміну</span><br><br><span class="other-size">Мінімальна сума депозиту</span> <br><span>10000 UAH</span></p>
 				</div>
-				<div class="additional-info">
-					<p>Усі депозити населення, розміщені в Ощадбанку захищені державою, незалежно від суми</p>
+				<div class="proposal-2">
+					<h2>моя картка</h2>
+					<img src="img/kartka.png" alt="" class="kartka">
+				</div>
+				<div class="proposal-3">
+					<h2>акція<br> вигравай електромобіль</h2>
 				</div>
 			</div>
-			<div class="slider-2">
-				<div class="slider">
-					<img src="img/site-logo.png" alt="">
-					<h2>депозит довіра</h2>
-					<br>
-					<p><span>₴<i class="fa fa-usd" aria-hidden="true"></i></span> <br><br>Можливість дострокового зняття<br><span class="other-color">Поповнення лише один раз<br>Виплата відсотків наприкінці терміну</span><br><br><span class="other-size">Мінімальна сума депозиту</span> <br><span>10000 UAH</span></p>
-				</div>
-				<div class="additional-info">
-					<p>Усі депозити населення, розміщені в Ощадбанку захищені державою, незалежно від суми</p>
-				</div>
-			</div>
-			<div class="slider-3">
-				<div class="slider">
-					<img src="img/site-logo.png" alt="">
-					<h2>депозит довіра</h2>
-					<br>
-					<p><span>₴<i class="fa fa-usd" aria-hidden="true"></i></span> <br><br>Можливість дострокового зняття<br><span class="other-color">Поповнення лише один раз<br>Виплата відсотків наприкінці терміну</span><br><br><span class="other-size">Мінімальна сума депозиту</span> <br><span>10000 UAH</span></p>
-				</div>
-				<div class="additional-info">
-					<p>Усі депозити населення, розміщені в Ощадбанку захищені державою, незалежно від суми</p>
-				</div>
-			</div>
-			<div class="slider-4">
-				<div class="slider">
-					<img src="img/site-logo.png" alt="">
-					<h2>депозит довіра</h2>
-					<br>
-					<p><span>₴<i class="fa fa-usd" aria-hidden="true"></i></span> <br><br>Можливість дострокового зняття<br><span class="other-color">Поповнення лише один раз<br>Виплата відсотків наприкінці терміну</span><br><br><span class="other-size">Мінімальна сума депозиту</span> <br><span>10000 UAH</span></p>
-				</div>
-				<div class="additional-info">
-					<p>Усі депозити населення, розміщені в Ощадбанку захищені державою, незалежно від суми</p>
-				</div>
-			</div>
-		</div>
 		</section>
 		<section class="table" >
-			<table>
-				<caption>
-					<h2>відсоткові ставки</h2>
-					<select name="" id="selectedCurrency" size="1">
-						<option value="" currency="UAH" class="selected activeCurrency" checked>₴    у гривні</option>
-						<option value="" currency="USD" class="activeCurrency"><i class="fa fa-usd" aria-hidden="true"></i>у доларах</option>
-						<option value="" currency="EUR" class="activeCurrency"><i class="fa fa-eur" aria-hidden="true"></i>у євро</option>
-					</select>
-					<span>на 10.11.2015</span>
-				</caption>
-				
+			<div class="wrap-caption">
+				<h2>відсоткові ставки</h2>
+				<select name="" id="selectedCurrency" size="1">
+					<option value="" currency="UAH" class="selected activeCurrency" checked>у гривні</option>
+					<option value="" currency="USD" class="activeCurrency">у доларах</option>
+				</select>
+				<span>на 10.11.2015</span>
+			</div>
+			<table data-currency="UAH">
 				<tr >
 					<th></th>
-					<th data-currency="UAH">від 100 ₴</th>
-					<!-- <th data-currency="USD">від 100<i class="fa fa-usd" aria-hidden="true"></i></th>
-					<th data-currency="EUR">від 100<i class="fa fa-eur" aria-hidden="true"></i></th> -->
-					<th data-currency="UAH">від 1000 ₴</th>
-					<!-- <th data-currency="USD">від 1000<i class="fa fa-usd" aria-hidden="true"></i></th>
-					<th data-currency="EUR">від 1000<i class="fa fa-eur" aria-hidden="true"></i></th> -->
-					<th data-currency="UAH">від 3000 ₴</th>
-					<!-- <th data-currency="USD">від 3000<i class="fa fa-usd" aria-hidden="true"></i></th>
-					<th data-currency="EUR">від 3000<i class="fa fa-eur" aria-hidden="true"></i></th -->>
-					<th data-currency="UAH">від 5000 ₴</th>
-					<!-- <th data-currency="USD">від 5000<i class="fa fa-usd" aria-hidden="true"></i></th>
-					<th data-currency="EUR">від 5000<i class="fa fa-eur" aria-hidden="true"></i></th> -->
-					<th data-currency="UAH">від 10000 ₴</th>
-					<!-- <th data-currency="USD">від 10000<i class="fa fa-usd" aria-hidden="true"></i></th>
-					<th data-currency="EUR">від 10000<i class="fa fa-eur" aria-hidden="true"></i></th> -->
+					<th>від 100 ₴</th>
+					<th>від 1000 ₴</th>
+					<th>від 3000 ₴</th>
+					<th>від 5000 ₴</th>
+					<th>від 10000 ₴</th>
 				</tr>
 				<tr>
 					<td>1 тиждень</td>
-					<td data-currency="UAH">18%</td><!-- <td data-currency="USD">18%</td><td data-currency="EUR">18%</td> -->
-					<td data-currency="UAH">18.5%</td><!-- <td data-currency="USD">19.5%</td><td data-currency="EUR">18.3%</td> -->
-					<td data-currency="UAH">19%</td><!-- <td data-currency="USD">19.6%</td><td data-currency="EUR">18.4%</td> -->
-					<td data-currency="UAH">19.5%</td><!-- <td data-currency="USD">20%</td><td data-currency="EUR">18.4%</td> -->
-					<td data-currency="UAH">20.5%</td><!-- <td data-currency="USD">20.2%</td><td data-currency="EUR">18.4%</td> -->
+					<td>18%</td>
+					<td>18.5%</td>
+					<td>19.2%</td>
+					<td>19.5%</td>
+					<td>20.5%</td>
 				</tr>
 				<tr>
 					<td>2 тижні</td>
-					<td data-currency="UAH">18%</td><!-- <td data-currency="USD">18%</td><td data-currency="EUR">19%</td> -->
-					<td data-currency="UAH">18.5%</td><!-- <td data-currency="USD">18.3%</td><td data-currency="EUR">19.5%</td> -->
-					<td data-currency="UAH">19.5%</td><!-- <td data-currency="USD">18.4%</td><td data-currency="EUR">20%</td> -->
-					<td data-currency="UAH">19.3%</td><!-- <td data-currency="USD">18.5%</td><td data-currency="EUR">20.2%</td> -->
-					<td data-currency="UAH">20.5%</td><!-- <td data-currency="USD">18.6%</td><td data-currency="EUR">20.5%</td> -->
+					<td>18%</td>
+					<td>18.5%</td>
+					<td>19.5%</td>
+					<td>19.3%</td>
+					<td>20.5%</td>
 				</tr>
 				<tr>
 					<td>1 місяць</td>
-					<td data-currency="UAH">18%</td><!-- <td data-currency="USD">18%</td><td data-currency="EUR">19%</td> -->
-					<td data-currency="UAH">18.5%</td><!-- <td data-currency="USD">18.3%</td><td data-currency="EUR">19.5%</td> -->
-					<td data-currency="UAH">19%</td><!-- <td data-currency="USD">18.4%</td><td data-currency="EUR">20%</td> -->
-					<td data-currency="UAH">19.5%</td><!-- <td data-currency="USD">18.5%</td><td data-currency="EUR">20.2%</td> -->
-					<td data-currency="UAH">20.5%</td><!-- <td data-currency="USD">18.6%</td><td data-currency="EUR">20.5%</td> -->
+					<td>18%</td>
+					<td>18.5%</td>
+					<td>19%</td>
+					<td>19.5%</td>
+					<td>20.5%</td>
 				</tr>
 				<tr>
 					<td>2 місяці</td>
-					<td data-currency="UAH">18%</td><!-- <td data-currency="USD">18%</td><td data-currency="EUR">19%</td> -->
-					<td data-currency="UAH">18.5%</td><!-- <td data-currency="USD">18.3%</td><td data-currency="EUR">19.5%</td> -->
-					<td data-currency="UAH">20%</td><!-- <td data-currency="USD">18.4%</td><td data-currency="EUR">20%</td> -->
-					<td data-currency="UAH">19.5%</td><!-- <td data-currency="USD">18.5%</td><td data-currency="EUR">20.2%</td> -->
-					<td data-currency="UAH">20.5%</td><!-- <td data-currency="USD">18.6%</td><td data-currency="EUR">20.5%</td> -->
+					<td>18%</td>
+					<td>18.5%</td>
+					<td>20%</td>
+					<td>19.5%</td>
+					<td>20.5%</td>
 				</tr>
 				<tr>
 					<td>6 місяців</td>
-					<td data-currency="UAH">18%</td><!-- <td data-currency="USD">18%</td><td data-currency="EUR">19%</td> -->
-					<td data-currency="UAH">18.5%</td><!-- <td data-currency="USD">18.3%</td><td data-currency="EUR">19.5%</td> -->
-					<td data-currency="UAH">20.2%</td><!-- <td data-currency="USD">18.4%</td><td data-currency="EUR">20%</td> -->
-					<td data-currency="UAH">19.5%</td><!-- <td data-currency="USD">18.5%</td><td data-currency="EUR">20.2%</td> -->
-					<td data-currency="UAH">20.5%</td><!-- <td data-currency="USD">18.6%</td><td data-currency="EUR">20.5%</td> -->
+					<td>18%</td>
+					<td>18.5%</td>
+					<td>20.2%</td>
+					<td>19.5%</td>
+					<td>20.5%</td>
 				</tr> 
 			</table>
+			<!-- <table data-currency="USD">
+				<tr >
+					<th></th>
+					<th>від 100 ₴</th>
+					<th>від 1000 ₴</th>
+					<th>від 3000 ₴</th>
+					<th>від 5000 ₴</th>
+					<th>від 10000 ₴</th>
+				</tr>
+				<tr>
+					<td>1 тиждень</td>
+					<td>18%</td>
+					<td>18.5%</td>
+					<td>19.2%</td>
+					<td>19.5%</td>
+					<td>20.5%</td>
+				</tr>
+				<tr>
+					<td>2 тижні</td>
+					<td>18%</td>
+					<td>18.5%</td>
+					<td>19.5%</td>
+					<td>19.3%</td>
+					<td>20.5%</td>
+				</tr>
+				<tr>
+					<td>1 місяць</td>
+					<td>18%</td>
+					<td>18.5%</td>
+					<td>19%</td>
+					<td>19.5%</td>
+					<td>20.5%</td>
+				</tr>
+				<tr>
+					<td>2 місяці</td>
+					<td>18%</td>
+					<td>18.5%</td>
+					<td>20%</td>
+					<td>19.5%</td>
+					<td>20.5%</td>
+				</tr>
+				<tr>
+					<td>6 місяців</td>
+					<td>18%</td>
+					<td>18.5%</td>
+					<td>20.2%</td>
+					<td>19.5%</td>
+					<td>20.5%</td>
+				</tr> 
+			</table> -->
 			<button type="submit">порівняти з іншими депозитами</button>
 		</section>
 		<section class="loyalty-program">
@@ -276,16 +290,16 @@
 				<button type="submit" class="checked">консультація</button>
 				<button type="submit">попереднє оформлення</button>
 				<p>Після заповнення заявки, з вами зв'яжеться працівник нашого банку та допоможе з подальшим оформленням депозиту.</p>
-				<form action="">
+				<form action="" id="form">
 					<select name="" id="" size="1">
-						<option value="">Оберіть Ваше місто</option>
-						<option value="">Київ</option>
-						<option value="">Одеса</option>
-						<option value="">Харків</option>
+						<option value="Оберіть Ваше місто">Оберіть Ваше місто</option>
+						<option value="Київ">Київ</option>
+						<option value="Одеса">Одеса</option>
+						<option value="Харків">Харків</option>
 					</select>
 					<input type="text" name="UserSurname" placeholder="ПІБ">
-					<input type="email" placeholder="E-mail">
-					<input type="tel" placeholder="Контактний номер телефону">
+					<input type="email" name="userEmail" placeholder="E-mail">
+					<input type="tel" name="userPhone" class="userPhone" placeholder="Контактний номер телефону">
 					<input type="submit" value="Відправити заявку">
 				</form>
 			</div>
@@ -320,7 +334,7 @@
 			</div>
 			<div class="info-contact ">
 				<span>контакт-центр ощадбанку</span>
-				<span>0800210800</span>
+				<span>0 800 210 800</span>
 				<span>безкоштовно зі стаціонарних та 'мобільних телефонів з території України</span>
 				<span>+380 44 363-01-33</span>
 			</div>
@@ -335,6 +349,9 @@
 	</footer>
 	<script   src="https://code.jquery.com/jquery-3.1.1.js"></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+	<script type="text/javascript" src="https://rawgit.com/digitalBush/jquery.maskedinput/master/src/jquery.maskedinput.js"></script>
+	<script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
+	<script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
 	<script src="js/script.js"></script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDi1D5LcfExS5pVnTYDqArLKog8VOLV5P0&callback=initMap"></script>
 </body>
