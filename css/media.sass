@@ -30,13 +30,13 @@
 	main 
 		.navigation 
 			.menu
-				width: 900px
+				width: 80%
 		.slider, .table ,.loyalty-program, .useful-info, .application, .master-card, .credit-program
 			width: calc(100% - 60px)
 		.info 
 			width: calc(100% - 50px)
 			.map 
-				width: 31%
+				width: 30%
 		.useful-info 
 			height: 560px
 			p 
@@ -54,6 +54,57 @@
 					color: #dddf3c
 					font-size: 1.2rem
 					display: block
-		
+	main
+		.credit-program
+			p
+				max-width: 330px
+		.master-card
+			h2
+				max-width: 200px
+			p 
+				max-width: 300px
+			.logo-master-card
+				display: none
+	footer
+		.wrapper-footer
+			min-width: 0px
+			.footer-link
+				width: 38%
+				margin-left: 20px
+			.info-contact 
+				width: 24%
+				margin-left: 20px
+@media only screen and (max-width: 860px) 
+	main 
+		.slider 
+			.additional-info
+				display: none
+			.main-slider 
+				.proposal-2 
+					.kartka 
+						width: 400px
+		.info
+			width: calc(100% - 60px)
+			.info-deposit
+				width: 100%
+			.map 
+				display: none
 
-
+@media only screen and (max-width: 760px) 
+	main 
+		.slider 
+			.main-slider 
+				.proposal-1, .proposal-2, .proposal-3
+					h2
+						font-size: 4rem
+	main 
+		.useful-info 
+			height: 600px
+	footer 
+		.wrapper-footer 
+			.helpful-link
+				width: 80%
+			.info-contact , .footer-link
+				width: 80%
+				margin-left: 60px
+				padding-bottom: 30px

@@ -80,10 +80,13 @@ $('#form').submit(function (){
 //   html.style
 // });
 // });
+var mq = window.matchMedia("(max-width: 1000px)");
 
-$('#input-access-type').val("Особистий");
+function changeAccess(mq) {
+  if (mq.matches) {
+    $('#input-access-type').val("Особистий");
 
-$('.access-type').hide();
+    $('.access-type').hide();
 
 $('#input-access-type').focus(function(){
     $('.access-type').show();
@@ -96,9 +99,50 @@ $('#content span').click(function(){
 
 $(window).click(function(){
     if ($("#input-access-type").is(":focus")) {
-      
     }
     else {
         $('.access-type').hide();
     }            
 });
+  } 
+}
+//change size of font
+var fontSize = $.cookie('fontSize');
+
+if (fontSize != undefined) {
+  $('html').css('fontSize', fontSize + 'px');
+};
+
+var minSize = 14,
+    maxSize = 20,
+    fontStep = 2,
+    $html = $('html');
+
+$('.font-minus').click(function() {
+  var fontSize = $.cookie('fontSize');
+
+  if (fontSize != undefined) {
+    if (fontSize != minSize) {
+      fontSize = parseFloat(fontSize) - fontStep;
+    };
+    $.cookie('fontSize', fontSize, { path: '/' });
+    $html.css('fontSize', fontSize + 'px');
+  }
+});
+
+$('.font-plus').click(function() {
+  var fontSize = $.cookie('fontSize');
+
+  if (fontSize != undefined) {
+    if (fontSize != maxSize) {
+      fontSize = parseFloat(fontSize) + fontStep;
+    };
+    
+  } else {
+    fontSize = minSize + fontStep;
+  }
+  $.cookie('fontSize', fontSize, { path: '/' });
+  $html.css('fontSize', fontSize + 'px');
+});
+
+
