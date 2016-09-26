@@ -57,7 +57,7 @@ footer
 				font-family: 'PT Sans', sans-serif
 		.footer-link
 			display: inline-block
-			width: 18%
+			width: 25%
 			float: left
 			list-style: none
 			margin: 0
@@ -68,22 +68,34 @@ footer
 				font-weight: 600
 				color: #4b5153
 				display: inline-block
-			i
-				display: inline-block
-				font-size: 2.4rem
-				color: #ebebeb
-				padding-right: 10px
-				padding-top: 15px
-				cursor: pointer
-				transition: color, 1s, easy-in-out
-				&:hover
-					color: #dcdf3c 
-				&:last-child
-					font-size: 2.6rem
+				img
+					width: 28px
+					height: 28px
+					background: white
+					margin-right: 10px
+					background-image: linear-gradient(to bottom, transparent, transparent 50%, #dcdf3c  50%, #dcdf3c )
+					ransition: all .25s ease-in;
+					background-position-y: 56px
+					background-size: 56px
+					transition: all .25s ease-in
+					&:hover
+						background-position-y: 28px
+			// i
+			// 	display: inline-block
+			// 	font-size: 2.4rem
+			// 	color: #ebebeb
+			// 	padding-right: 10px
+			// 	padding-top: 15px
+			// 	cursor: pointer
+			// 	transition: color, 1s, easy-in-out
+			// 	&:hover
+			// 		color: #dcdf3c 
+			// 	&:last-child
+			// 		font-size: 2.6rem
 		.label
+			display: block
 			width: 100%
 			clear: both
-			padding-bottom: 30px
 			list-style: none
 			margin: 0
 			padding: 0

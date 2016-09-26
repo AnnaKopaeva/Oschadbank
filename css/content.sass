@@ -207,6 +207,12 @@ main
 			margin-left: 60px
 			border: 2px solid #7196da
 			background: transparent
+			outline: none
+			transition: background, 1s, easy
+			&:hover
+				background: #7196da
+			&:active
+				background: #557dc8
 	.loyalty-program
 		padding-left: 60px
 		padding-top: 88px
@@ -334,6 +340,7 @@ main
 				background: white
 				margin-bottom: 43px
 				font-weight: 500
+				outline: none
 				&:nth-child(3)
 					width: 200px
 			.checked
@@ -356,6 +363,7 @@ main
 				border: 2px solid #c6c6b9
 				font-size: 1rem
 				font-weight: 600
+				outline: none
 			select
 				width: 544px
 			input::-webkit-input-placeholder
@@ -367,6 +375,12 @@ main
 				background: white
 				box-sizing: border-box
 				width: 544px
+				transition: background, 1s, easy
+				outline: none
+				&:hover
+					background: #dcdf3c
+				&:active
+					background: #a8aa2a
 	.master-card
 		width: calc(100% - 260px)
 		height: 300px
