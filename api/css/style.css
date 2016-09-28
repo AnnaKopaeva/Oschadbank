@@ -425,8 +425,8 @@ main .navigation .menu ul li .menu__popup.deposit ul li {
   background-image: linear-gradient(to left, transparent, transparent 50%, #f4f750 50%, #f4f750);
   background-position: 100% 0;
   background-size: 200% 100%;
-  -webkit-transition: all .25s ease-in;
-  transition: all .25s ease-in;
+  -webkit-transition: background .25s ease-in;
+  transition: background .25s ease-in;
 }
 
 main .navigation .menu ul li .menu__popup.deposit ul li:hover {
@@ -488,8 +488,8 @@ main .navigation .menu ul li .menu__popup.cart li li {
   background-image: linear-gradient(to left, transparent, transparent 50%, #f4f750 50%, #f4f750);
   background-position: 100% 0;
   background-size: 200% 100%;
-  -webkit-transition: all .25s ease-in;
-  transition: all .25s ease-in;
+  -webkit-transition: background .25s ease-in;
+  transition: background .25s ease-in;
 }
 
 main .navigation .menu ul li .menu__popup.cart li li:hover {
@@ -529,8 +529,8 @@ main .navigation .menu ul li .menu__popup.search .grid .grid-item ul li {
   background-image: linear-gradient(to left, transparent, transparent 50%, #f4f750 50%, #f4f750);
   background-position: 100% 0;
   background-size: 201% 100%;
-  -webkit-transition: all .25s ease-in;
-  transition: all .25s ease-in;
+  -webkit-transition: background .25s ease-in;
+  transition: background .25s ease-in;
 }
 
 main .navigation .menu ul li .menu__popup.search .grid .grid-item ul li:hover {
