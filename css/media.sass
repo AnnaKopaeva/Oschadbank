@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1024px) 
+@media only screen and (max-width: 1200px) 
 	header
 		.setting
 			.change-lang
@@ -6,42 +6,49 @@
 			.size-allfont
 				right: 180px
 	aside
-		right: -192px
-		transition: right, 1s, easy
-		&:hover
-			right: 0
-			.services .search-service, .contacts
-				right: 0
-		.services 
-			.search-service
-				right: -192px
-				transition: right, 1s, easy
-				&:hover
-					right: 0
-					.contacts, aside
-						right: 0
-		.contacts
+		.wrap-aside
 			right: -192px
 			transition: right, 1s, easy
 			&:hover
 				right: 0
-				.services .search-service, aside
+				.services .search-service, .contacts
 					right: 0
-	main 
+			.services 
+				.search-service
+					right: -192px
+					transition: right, 1s, easy
+					&:hover
+						right: 0
+						.contacts, aside .wrap-aside
+							right: 0
+			.contacts
+				right: -192px
+				transition: right, 1s, easy
+				&:hover
+					right: 0
+					.services .search-service, aside
+						right: 0
+	main
 		.navigation 
 			.menu
-				width: 80%
-		.slider, .table ,.loyalty-program, .useful-info, .application, .master-card, .credit-program
+				width: 94%
+				.inner-wrapper
+					li
+						font-size: 0.7rem 
+					.long-link
+						width: 97px
+		.slider, .table ,.loyalty-program, .useful-info, .info, .application, .master-card, .credit-program
 			width: calc(100% - 60px)
-		.info 
-			width: calc(100% - 50px)
-			.map 
-				width: 30%
 		.useful-info 
 			height: 560px
 			p 
 				max-width: 585px
-@media only screen and (max-width: 1000px) 
+@media only screen and (max-width: 1000px)
+	footer
+		.wrapper-footer
+			ul
+				margin-left: 0px!important
+				margin-right: 8%
 	header
 		.wrap-access-type
 			#input-access-type
@@ -54,7 +61,8 @@
 					color: #dddf3c
 					font-size: 1.2rem
 					display: block
-	main
+		.slider
+			margin-top: 70px
 		.credit-program
 			p
 				max-width: 330px
@@ -76,15 +84,26 @@
 				margin-left: 20px
 @media only screen and (max-width: 860px) 
 	main 
+		.navigation 
+			.menu
+				width: 90%
+				ul
+					.inner-wrapper
+						li
+							&:nth-child(4), &:nth-child(5)
+								display: none
 		.slider 
+			height: 720px
 			.additional-info
-				display: none
+				display: block
+				position: relative
+				width: 100%
+				left: 0
 			.main-slider 
 				.proposal-2 
 					.kartka 
 						width: 400px
 		.info
-			width: calc(100% - 60px)
 			.info-deposit
 				width: 100%
 			.map 
@@ -93,13 +112,25 @@
 @media only screen and (max-width: 760px) 
 	main 
 		.slider 
+			.site-logo
+				top: -45px
+				left: 30px
+				width: 180px
+				height: 90px
 			.main-slider 
 				.proposal-1, .proposal-2, .proposal-3
 					h2
 						font-size: 4rem
-	main 
 		.useful-info 
 			height: 600px
+		.master-card 
+			.picture-1
+				width: 210px
+				right: 0px
+		.credit-program 
+			img
+				width: 210px
+				right: 0px
 	footer 
 		.wrapper-footer 
 			.helpful-link
@@ -108,3 +139,198 @@
 				width: 80%
 				margin-left: 60px
 				padding-bottom: 30px
+@media only screen and (max-width: 650px) 
+	main 
+		.slider 
+			.main-slider 
+				.proposal-1
+					h2, p
+						padding-left: 20px!important
+					h2
+						font-size: 2.5rem
+				.proposal-2 
+					h2
+						padding-left: 20px!important
+						font-size: 2.5rem
+					.kartka
+						width: 300px
+						right: 20px
+				.proposal-3 
+					h2
+						padding-left: 20px!important
+						font-size: 2.5rem
+		.table
+			.wrap-caption
+				padding-left: 20px!important
+				h2
+					padding-bottom: 20px
+			table
+				padding-left: 20px!important
+				
+				tr
+					padding-bottom: 5px
+					th 
+						font-size: 0.6rem
+					td 
+						font-size: 0.8rem
+			button
+				width: 270px
+				padding-left: 20px!important
+		.application 
+			div 
+				width: 455px
+				select, input[type="submit"]
+					width: 454px
+				input
+					width: 450px
+		.useful-info, .info-deposit, .loyalty-program
+			padding-left: 20px!important
+		.master-card
+			padding-left: 20px
+			p 
+				z-index: 2
+				position: relative
+			.picture-1
+				width: 170px
+				right: -60px
+			h2
+				font-size: 1.8rem
+				max-width: 310px
+		.credit-program 
+			padding-left: 20px
+			p 
+				z-index: 2
+				position: relative
+			h2
+				font-size: 1.8rem
+				max-width: 310px
+			img
+				width: 170px
+				right: -60px
+	footer 
+		.wrapper-footer
+			max-width: 80%
+			margin-left: 20px
+	.select#selectedCurrency
+		display: none
+	.table-button
+		margin-left: 0
+		width: 316px
+	.info .map-button
+		display: none
+	.slider
+		width: 100% !important
+	.slick-list
+		width: 100%
+	main
+		overflow-x: hidden
+	main .slider .site-logo
+		top: -9px
+	.access-type
+		display: none
+@media only screen and (max-width: 550px) 
+	header 
+		.wrap-access-type 
+			.access-type
+				width: 100px
+	main 
+		.info 
+			height: 615px
+		.useful-info
+			height: 725px
+		.application 
+			height: 750px
+			div 
+				width: 355px
+				select, input[type="submit"]
+					width: 354px
+				input
+					width: 350px
+		.table
+			button
+				display: none
+@media only screen and (max-width: 425px)
+	aside
+		.wrap-aside
+			display: none
+	main
+		.slider 
+			.site-logo
+				left: 15px
+				width: 150px
+		.slider, .table ,.loyalty-program, .useful-info, .info, .master-card, .credit-program
+			width: calc(100% - 20px)
+		.slider 
+			.main-slider 
+				.proposal-2 
+					.kartka
+						width: 260px
+				.proposal-3
+					h2
+						padding-left: 0px !important
+		.table
+			.wrap-caption
+				padding-top: 0px
+			table
+				width: 100%
+		.loyalty-program
+			padding-top: 0px
+			padding-bottom: 20px
+		.useful-info
+			padding-top: 20px
+		.application
+			width: 100%
+			height: 420px
+			div
+				width: 90%
+				form
+					display: none
+				button
+					display: block
+					height: 60px 
+					font-size: 1.5rem
+					border: 2px solid #dcdf3c
+					background: white
+					margin-bottom: 20px
+					font-weight: 600
+				.pre-registration
+					width: 100%
+				.checked
+					background: white
+					width: 100%
+		.addition
+			display: block
+		.master-card 
+			margin-top: 5px
+			.logo-master-card
+				width: 120px
+		.wrap-checked
+			height: 48px!important
+		.navigation
+			.menu
+				input[type="checkbox"]
+					&:checked + ul
+						height: 100vh!important
+						display: block
+						background: #dce123
+				ul
+					height: 0
+					overflow: hidden
+					transition: all 0.5s ease-out
+					.inner-wrapper
+						li
+							height: calc((100vh - 56px ) / 5)
+							display: block
+							background: rgba(255, 255, 255, 0.8)
+							z-index: 5
+	footer 
+		.wrapper-footer 
+			.footer-link 
+				li 
+					img
+						width: 35px
+						height: 35px
+						background-position-y: 70px
+						background-size: 70px
+						&:hover
+							background-position-y: 35px

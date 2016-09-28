@@ -1,17 +1,3 @@
-//table
-
-// $('#selectedCurrency').find('option').ready(function(){
-//   $(".selected").removeClass("activeCurrency");
-//   $(this).addClass("activeCurrency");
-// });
-// $('#selectedCurrency option').click(function(){
-//   alert("here")
-//   var currency = $(this).attr("currency"); 
-//   $('table[data-currency]').hide(); 
-//   $('table[data-currency='+ currency + ']').show(); //.fadeToggle('2000ms', 'linear'); 
-
-// });
-
 //slider
 $('.main-slider').slick({
   dots: false,
@@ -36,6 +22,7 @@ function initMap() {
     map: map
   });
 }
+
 // validation form
 $('.userPhone').mask('+38(999) 999-9999');
 $('#form').submit(function (){
@@ -75,11 +62,6 @@ $('#form').submit(function (){
   return false;
 });
 
-// change font size
-// $('.font-minus').click(function(){
-//   html.style
-// });
-// });
 var mq = window.matchMedia("(max-width: 1000px)");
 
 function changeAccess(mq) {
@@ -106,6 +88,7 @@ $(window).click(function(){
 });
   } 
 }
+
 //change size of font
 var fontSize = $.cookie('fontSize');
 
@@ -144,5 +127,47 @@ $('.font-plus').click(function() {
   $.cookie('fontSize', fontSize, { path: '/' });
   $html.css('fontSize', fontSize + 'px');
 });
+
+// search
+$('.search #search').keyup(function () {  
+  $('.search li').each(function (index) {
+    var nameTag = $(this).text().toLowerCase(),
+        searchStr = $('.search #search').val().toLowerCase();
+    if (nameTag.indexOf(searchStr) == -1) {
+      $(this).hide();
+    } else {
+      $(this).show();
+    }
+  });
+  changeGrid(); 
+});
+
+// grid
+function changeGrid() {
+  $('.grid').isotope({
+    itemSelector: '.grid-item',
+    percentPosition: true,
+  });
+  var $selector = $('.search div');
+  $selector.animate({height: $selector.parent().height() - 42 +'px'}, 250, "linear")
+}
+changeGrid()
+
+// usd
+$('a.usd').click(function() {
+  $this = $(this).parent();
+  $('#selectedCurrency ul').prepend($this)
+  // $this.remove()
+  $('table.usd').show();
+  $('table.uah').hide();
+});
+
+$('a.uah').click(function() {
+  $this = $(this).parent();
+  $('#selectedCurrency ul').prepend($this)
+  $('table.uah').show();
+  $('table.usd').hide();
+});
+
 
 

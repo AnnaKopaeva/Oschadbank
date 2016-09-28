@@ -1,4 +1,4 @@
-aside {
+aside .wrap-aside {
   width: 240px;
   height: 100%;
   background: #212628;
@@ -8,10 +8,10 @@ aside {
   clear: both;
   position: fixed;
   right: 0;
-  z-index: 3;
+  z-index: 7;
 }
 
-aside:after {
+aside .wrap-aside:after {
   content: " ";
   display: block;
   clear: both;
@@ -19,13 +19,13 @@ aside:after {
   height: 1px;
 }
 
-aside .services {
+aside .wrap-aside .services {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-aside .services .search-service {
+aside .wrap-aside .services .search-service {
   width: 240px;
   height: 48px;
   padding-left: 20px;
@@ -39,29 +39,29 @@ aside .services .search-service {
   line-height: 48px;
 }
 
-aside .services .search-service i {
+aside .wrap-aside .services .search-service i {
   color: #dcdf3c;
   margin-right: 13px;
 }
 
-aside .services .search-service input {
+aside .wrap-aside .services .search-service input {
   background: transparent;
   color: #717779;
   border: none;
   font-size: 0.929rem;
 }
 
-aside .services .search-service input:focus {
+aside .wrap-aside .services .search-service input:focus {
   outline: none;
 }
 
-aside .services .search-service input::-webkit-input-placeholder {
+aside .wrap-aside .services .search-service input::-webkit-input-placeholder {
   opacity: 1;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 
-aside .services .title {
+aside .wrap-aside .services .title {
   display: block;
   height: 60px;
   width: 100%;
@@ -74,7 +74,7 @@ aside .services .title {
   border-bottom: #2f3335 solid 1px;
 }
 
-aside .services .login {
+aside .wrap-aside .services .login {
   height: 45px;
   line-height: 50px;
   border-bottom: #2f3335 solid 1px;
@@ -82,9 +82,10 @@ aside .services .login {
   -webkit-transition: background, 0.2s, easy-in-out;
   transition: background, 0.2s, easy-in-out;
   display: block;
+  font-weight: bold;
 }
 
-aside .services .login a {
+aside .wrap-aside .services .login a {
   text-decoration: none;
   width: 100%;
   background: url("../img/dashboard-sprites.png") no-repeat;
@@ -96,16 +97,16 @@ aside .services .login a {
   transition: color, 0.2s, easy-in-out;
 }
 
-aside .services .login:hover {
+aside .wrap-aside .services .login:hover {
   background: #dcdf3c;
 }
 
-aside .services .login:hover a {
+aside .wrap-aside .services .login:hover a {
   background-position: 0px -50px;
   color: black;
 }
 
-aside .services .about-bank a {
+aside .wrap-aside .services .about-bank a {
   width: 100%;
   text-decoration: none;
   color: #fff;
@@ -121,13 +122,14 @@ aside .services .about-bank a {
   background-size: 200% 100%;
   -webkit-transition: all .25s ease-in;
   transition: all .25s ease-in;
+  font-weight: bold;
 }
 
-aside .services .about-bank a:hover {
+aside .wrap-aside .services .about-bank a:hover {
   background-position: 0 0;
 }
 
-aside .submenu {
+aside .wrap-aside .submenu {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -136,16 +138,17 @@ aside .submenu {
   font-size: 0.928rem;
   border-bottom: #2f3335 solid 1px;
   display: block;
+  font-weight: bold;
 }
 
-aside .submenu .other-services {
+aside .wrap-aside .submenu .other-services {
   font-size: 0.857rem;
-  font-weight: 60;
+  font-weight: bold;
   color: #4b5153;
   padding-left: 46px;
 }
 
-aside .submenu li a {
+aside .wrap-aside .submenu li a {
   width: 100%;
   text-decoration: none;
   padding-left: 50px;
@@ -161,15 +164,15 @@ aside .submenu li a {
   transition: all .25s ease-in;
 }
 
-aside .submenu li a:hover {
+aside .wrap-aside .submenu li a:hover {
   background-position: 0 0;
 }
 
-aside .submenu li:nth-child(7) {
+aside .wrap-aside .submenu li:nth-child(7) {
   border-bottom: #2f3335 solid 1px;
 }
 
-aside .submenu li:nth-child(8) {
+aside .wrap-aside .submenu li:nth-child(8) {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -180,7 +183,7 @@ aside .submenu li:nth-child(8) {
   transition: background, 0.2s, easy-in-out;
 }
 
-aside .submenu li:nth-child(8) a {
+aside .wrap-aside .submenu li:nth-child(8) a {
   width: 100%;
   text-decoration: none;
   border: none;
@@ -192,17 +195,17 @@ aside .submenu li:nth-child(8) a {
   transition: color, 0.2s, easy-in-out;
 }
 
-aside .submenu li:nth-child(8):hover {
+aside .wrap-aside .submenu li:nth-child(8):hover {
   background: #dcdf3c;
   color: black;
 }
 
-aside .submenu li:nth-child(8):hover a {
+aside .wrap-aside .submenu li:nth-child(8):hover a {
   color: black;
   background-position: 0px -153px;
 }
 
-aside .contacts {
+aside .wrap-aside .contacts {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -214,7 +217,7 @@ aside .contacts {
   width: 240px;
 }
 
-aside .contacts .title-contacts {
+aside .wrap-aside .contacts .title-contacts {
   color: #4b5153;
   font-size: 0.857rem;
   font-weight: 600;
@@ -222,16 +225,17 @@ aside .contacts .title-contacts {
   padding-bottom: 10px;
 }
 
-aside .contacts .telephone {
+aside .wrap-aside .contacts .telephone {
   color: white;
   font-size: 1.571rem;
   font-weight: 600;
   padding-left: 50px;
   background: url("../img/dashboard-sprites.png") no-repeat;
   background-position: 0px -215px;
+  margin-bottom: 10px;
 }
 
-aside .contacts .online-help {
+aside .wrap-aside .contacts .online-help {
   background: #161a1b;
   height: 50px;
   line-height: 50px;
@@ -241,7 +245,7 @@ aside .contacts .online-help {
   width: 100%;
 }
 
-aside .contacts .online-help a {
+aside .wrap-aside .contacts .online-help a {
   width: 100%;
   text-decoration: none;
   background: url("../img/dashboard-sprites.png") no-repeat;
@@ -252,16 +256,16 @@ aside .contacts .online-help a {
   transition: color, 0.2s, easy-in-out;
 }
 
-aside .contacts .online-help:hover {
+aside .wrap-aside .contacts .online-help:hover {
   background: #dcdf3c;
 }
 
-aside .contacts .online-help:hover a {
+aside .wrap-aside .contacts .online-help:hover a {
   color: black;
   background-position: 0px -366px;
 }
 
-aside .contacts .online-help:active {
+aside .wrap-aside .contacts .online-help:active {
   background: #c2c52e;
 }
 main {
@@ -270,17 +274,38 @@ main {
           box-sizing: border-box;
 }
 
+main .wrap-checked {
+  height: 0px;
+  overflow: hidden;
+  background: #161a1b;
+  width: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+main .wrap-checked label[for="ch"] i {
+  font-size: 2rem;
+  line-height: 42px;
+  color: #dce123;
+  padding-left: 13px;
+}
+
 main .navigation {
   width: 100%;
   position: relative;
-  z-index: 1;
+  z-index: 3;
 }
 
 main .navigation .menu {
   -webkit-perspective: 1000px;
           perspective: 1000px;
-  width: 1000px;
-  right: -240px;
+  width: auto;
+  margin-right: 250px;
+}
+
+main .navigation .menu input[type="checkbox"] {
+  display: none;
 }
 
 main .navigation .menu ul {
@@ -297,16 +322,19 @@ main .navigation .menu ul .inner-wrapper {
   position: relative;
 }
 
+main .navigation .menu ul .inner-wrapper > li {
+  text-align: center;
+  text-transform: uppercase;
+}
+
 main .navigation .menu ul li {
   display: inline-block;
-  width: 100px;
+  padding: 0 14px;
   height: 36px;
   line-height: 36px;
   -webkit-transition: background .3s;
   transition: background .3s;
   cursor: pointer;
-  text-align: center;
-  text-transform: uppercase;
   font-weight: bold;
   font-size: .88rem;
   letter-spacing: 1px;
@@ -314,6 +342,7 @@ main .navigation .menu ul li {
 }
 
 main .navigation .menu ul li .menu__popup {
+  text-transform: none;
   -webkit-transform-origin: center top;
       -ms-transform-origin: center top;
           transform-origin: center top;
@@ -330,7 +359,85 @@ main .navigation .menu ul li .menu__popup {
   transition: visibility 0s linear 0.3s, -webkit-transform 0.3s;
   transition: visibility 0s linear 0.3s, transform 0.3s;
   transition: visibility 0s linear 0.3s, transform 0.3s, -webkit-transform 0.3s;
-  z-index: 2;
+  z-index: 4;
+  text-align: left;
+  padding-left: 0px;
+  width: 100%;
+  text-indent: 15px;
+}
+
+main .navigation .menu ul li .menu__popup ul li ul p {
+  font-size: 0.85rem;
+  color: #a8aa2a;
+  font-weight: 600;
+  padding-top: 10px;
+}
+
+main .navigation .menu ul li .menu__popup ul li ul li {
+  display: block;
+  font-size: 1rem;
+  width: 100%;
+  background-image: -webkit-gradient(linear, right top, left top, from(transparent), color-stop(50%, transparent), color-stop(50%, #f4f750), color-stop(50%, #f4f750));
+  background-image: -webkit-linear-gradient(right, transparent, transparent 50%, #f4f750 50%, #f4f750);
+  background-image: linear-gradient(to left, transparent, transparent 50%, #f4f750 50%, #f4f750);
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  -webkit-transition: all .25s ease-in;
+  transition: all .25s ease-in;
+}
+
+main .navigation .menu ul li .menu__popup ul li ul li:hover {
+  background-position: 0 0;
+}
+
+main .navigation .menu ul li .menu__popup ul li ul li a {
+  font-weight: 600;
+}
+
+main .navigation .menu ul li .menu__popup ul li ul .last {
+  margin-bottom: 10px;
+}
+
+main .navigation .menu ul li .menu__popup.deposit {
+  width: 290px;
+  height: 315px;
+}
+
+main .navigation .menu ul li .menu__popup.deposit ul .butt {
+  padding-top: 20px;
+  border-top: 1px solid #c2c52e;
+  background-image: none;
+}
+
+main .navigation .menu ul li .menu__popup.deposit ul .butt a {
+  margin-left: 15px;
+  display: block;
+  margin-bottom: 20px;
+  background: #c2c52e;
+  width: 260px;
+  height: 50px;
+  font-size: 1.1rem;
+  text-align: center;
+  line-height: 50px;
+  text-transform: none;
+}
+
+main .navigation .menu ul li .menu__popup.search input {
+  display: block !important;
+}
+
+main .navigation .menu ul li .menu__popup.search .grid {
+  height: 500px;
+}
+
+main .navigation .menu ul li .menu__popup.search .grid .grid-item {
+  display: block;
+  height: 500px;
+}
+
+main .navigation .menu ul li .menu__popup.search .grid .grid-item ul li {
+  height: auto !important;
+  width: 25% !important;
 }
 
 main .navigation .menu ul li:hover {
@@ -351,6 +458,7 @@ main .navigation .menu ul li:hover .menu__popup {
 main .navigation .menu ul li a {
   text-decoration: none;
   color: #000;
+  width: 100px;
 }
 
 main .slider {
@@ -537,31 +645,12 @@ main .table table tr th {
 }
 
 main .table table tr td {
+  font-size: 1rem;
   text-align: center;
 }
 
 main .table table tr td:first-child {
   text-align: left;
-}
-
-main .table button {
-  width: 320px;
-  height: 48px;
-  margin-top: 40px;
-  margin-left: 60px;
-  border: 2px solid #7196da;
-  background: transparent;
-  outline: none;
-  -webkit-transition: background, 1s, easy;
-  transition: background, 1s, easy;
-}
-
-main .table button:hover {
-  background: #7196da;
-}
-
-main .table button:active {
-  background: #557dc8;
 }
 
 main .loyalty-program {
@@ -610,15 +699,18 @@ main .info {
   width: calc(100% - 260px);
   height: 489px;
   overflow: hidden;
+  position: relative;
 }
 
 main .info .info-deposit {
-  width: 62%;
+  width: 68%;
   padding-left: 60px;
   background: #7196da;
   float: left;
   display: inline-block;
   height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 main .info .info-deposit h2 {
@@ -654,6 +746,19 @@ main .info .map {
   float: left;
   display: inline-block;
   height: 100%;
+  position: relative;
+}
+
+main .info .map-button {
+  position: absolute;
+  bottom: 18px;
+  right: 15px;
+  width: 300px;
+}
+
+main .info .map-button a {
+  text-decoration: none;
+  color: #000;
 }
 
 main .useful-info {
@@ -743,7 +848,7 @@ main .application div button {
   outline: none;
 }
 
-main .application div button:nth-child(3) {
+main .application div .pre-registration {
   width: 200px;
 }
 
@@ -788,21 +893,31 @@ main .application div input::-webkit-input-placeholder {
 
 main .application div input[type="submit"] {
   border: 2px solid #dcdf3c;
-  background: white;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 544px;
-  -webkit-transition: background, 1s, easy;
-  transition: background, 1s, easy;
   outline: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), color-stop(50%, #dcdf3c), color-stop(50%, #dcdf3c));
+  background-image: -webkit-linear-gradient(top, transparent, transparent 50%, #dcdf3c 50%, #dcdf3c);
+  background-image: linear-gradient(to bottom, transparent, transparent 50%, #dcdf3c 50%, #dcdf3c);
+  background-position-y: 0;
+  background-size: 200%;
+  -webkit-transition: all .25s ease-in;
+  transition: all .25s ease-in;
 }
 
 main .application div input[type="submit"]:hover {
-  background: #dcdf3c;
+  background-position-y: 100%;
 }
 
-main .application div input[type="submit"]:active {
-  background: #a8aa2a;
+main .addition {
+  display: none;
+  padding-left: 20px;
+  margin: 0;
+  font-weight: 600;
+  font-size: 2rem;
+  padding-top: 20px;
+  color: #4b5153;
 }
 
 main .master-card {
@@ -817,6 +932,7 @@ main .master-card {
           box-sizing: border-box;
   color: white;
   position: relative;
+  overflow: hidden;
 }
 
 main .master-card h2 {
@@ -830,6 +946,7 @@ main .master-card h2 {
 main .master-card p {
   padding-bottom: 70px;
   margin: 0;
+  line-height: 23px;
 }
 
 main .master-card .logo-master-card {
@@ -858,6 +975,7 @@ main .credit-program {
   color: white;
   margin-bottom: 20px;
   position: relative;
+  overflow: hidden;
 }
 
 main .credit-program h2 {
@@ -900,29 +1018,163 @@ em.error {
   position: relative;
 }
 
-.search {
-  text-align: left !important;
+.table-button {
+  width: 320px;
+  height: 48px;
+  display: inline-block;
+  line-height: 48px;
+  text-align: center;
+  margin-top: 40px;
+  margin-left: 60px;
+  border: 2px solid #7196da;
+  background: none;
+  outline: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(50%, #fff), color-stop(50%, #7196da), color-stop(50%, #7196da));
+  background-image: -webkit-linear-gradient(top, #fff, #fff 50%, #7196da 50%, #7196da);
+  background-image: linear-gradient(to bottom, #fff, #fff 50%, #7196da 50%, #7196da);
+  background-position-y: 0;
+  background-size: 200%;
+  -webkit-transition: all .25s ease-in;
+  transition: all .25s ease-in;
+  font-weight: bold;
 }
 
-.search input {
-  display: block !important;
+.table-button:hover {
+  background-position-y: 100%;
 }
 
-.search li {
-  height: auto !important;
-  width: 33% !important;
+.select#selectedCurrency {
+  display: inline-block;
+  position: absolute;
+  height: 40px;
+  outline: 2px solid #7196da;
 }
 
-.search ul {
-  display: inline-block !important;
-  text-align: left !important;
-  border: 1px solid;
-  float: left;
+.select#selectedCurrency:hover {
+  height: auto;
+  outline: 0px solid #dddf3c;
 }
 
-.search ul li {
-  height: auto !important;
-  text-align: left !important;
+.select#selectedCurrency ul {
+  margin-top: -4px;
+}
+
+.select#selectedCurrency ul:first-child:hover {
+  height: auto;
+}
+
+.select#selectedCurrency ul li:first-child:after {
+  position: absolute;
+  content: "";
+  top: 16px;
+}
+
+.select#selectedCurrency a {
+  color: #000;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.select {
+  overflow: hidden;
+  height: 48px;
+  width: 110px;
+  line-height: 43px;
+  background: transparent;
+  color: #929c9f;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-indent: 10px;
+}
+
+.select:hover {
+  background: #dddf3c;
+  color: black;
+  height: auto;
+}
+
+.select:hover a {
+  color: #000;
+}
+
+.select:hover li:first-child:after {
+  border-top: 6px solid #000;
+}
+
+.select ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.select ul li {
+  height: 48px;
+  background-image: -webkit-gradient(linear, right top, left top, from(transparent), color-stop(50%, transparent), color-stop(50%, #f4f750), color-stop(50%, #f4f750));
+  background-image: -webkit-linear-gradient(right, transparent, transparent 50%, #f4f750 50%, #f4f750);
+  background-image: linear-gradient(to left, transparent, transparent 50%, #f4f750 50%, #f4f750);
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  -webkit-transition: all .25s ease-in;
+  transition: all .25s ease-in;
+  display: block;
+}
+
+.select ul li a {
+  text-decoration: none;
+  color: #929c9f;
+}
+
+.select ul li:hover {
+  background-position: 0 0;
+}
+
+.select ul li:first-child:after {
+  position: absolute;
+  content: "";
+  top: 20px;
+  right: 4px;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 6px solid #929c9f;
+}
+
+.select ul li:first-child {
+  background-image: -webkit-gradient(linear, right top, left top, from(transparent), color-stop(50%, transparent), color-stop(50%, #f4f750), color-stop(50%, #f4f750));
+  background-image: -webkit-linear-gradient(right, transparent, transparent 50%, #f4f750 50%, #f4f750);
+  background-image: linear-gradient(to left, transparent, transparent 50%, #f4f750 50%, #f4f750);
+  background-position: 100% 0;
+  background-size: 200% 100%;
+}
+
+.select span {
+  display: block;
+  width: 110px;
+  height: 48px;
+  line-height: 43px;
+  background: transparent;
+  color: #71797c;
+  font-weight: 600;
+  font-size: 1.2rem;
+  height: 48px;
+  text-indent: 14px;
+}
+
+.select span:hover {
+  background: #dddf3c;
+  color: black;
+}
+
+.select span:hover .en,
+.select span:hover .ru {
+  display: block;
+  z-index: 2;
+}
+
+.hidden {
+  display: none;
 }
 
 footer {
@@ -938,7 +1190,15 @@ footer .wrapper-footer {
   margin: 0 auto;
   padding-top: 55px;
   height: 252px;
-  display: inline-block;
+  display: block;
+  margin-left: 60px;
+  padding-bottom: 55px;
+}
+
+footer .wrapper-footer ul {
+  margin-left: 0px !important;
+  margin-right: -webkit-calc((100% - 920px)/6);
+  margin-right: calc((100% - 920px)/6);
 }
 
 footer .wrapper-footer .helpful-link {
@@ -946,9 +1206,7 @@ footer .wrapper-footer .helpful-link {
   width: 24%;
   float: left;
   list-style: none;
-  margin: 0;
   padding: 0;
-  margin-left: 60px;
 }
 
 footer .wrapper-footer .helpful-link .title-helpful-link {
@@ -973,12 +1231,10 @@ footer .wrapper-footer .helpful-link .different-services:hover {
 
 footer .wrapper-footer .info-contact {
   display: inline-block;
-  width: 20%;
+  width: 24%;
   float: left;
   list-style: none;
-  margin: 0;
   padding: 0;
-  margin-left: 60px;
 }
 
 footer .wrapper-footer .info-contact li {
@@ -1007,12 +1263,10 @@ footer .wrapper-footer .info-contact .ph {
 
 footer .wrapper-footer .footer-link {
   display: inline-block;
-  width: 25%;
+  width: 24%;
   float: left;
   list-style: none;
-  margin: 0;
   padding: 0;
-  margin-left: 60px;
 }
 
 footer .wrapper-footer .footer-link li {
@@ -1030,11 +1284,10 @@ footer .wrapper-footer .footer-link li img {
   background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), color-stop(50%, #dcdf3c), color-stop(50%, #dcdf3c));
   background-image: -webkit-linear-gradient(top, transparent, transparent 50%, #dcdf3c 50%, #dcdf3c);
   background-image: linear-gradient(to bottom, transparent, transparent 50%, #dcdf3c 50%, #dcdf3c);
-  ransition: all .25s ease-in;
-  background-position-y: 56px;
-  background-size: 56px;
   -webkit-transition: all .25s ease-in;
   transition: all .25s ease-in;
+  background-position-y: 56px;
+  background-size: 56px;
 }
 
 footer .wrapper-footer .footer-link li img:hover {
@@ -1048,7 +1301,6 @@ footer .wrapper-footer .label {
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-left: 60px;
   line-height: 11px;
 }
 
@@ -1080,6 +1332,7 @@ header {
 }
 
 header .wrap-access-type {
+  font-family: 'PT Sans', sans-serif;
   width: 180px;
   height: 48px;
 }
@@ -1103,18 +1356,20 @@ header .wrap-access-type .access-type {
   font-weight: 500;
 }
 
-header .wrap-access-type .access-type span {
+header .wrap-access-type .access-type span a {
   color: #71797c;
+  text-decoration: none;
   text-transform: uppercase;
   margin-left: 30px;
-  font-size: 0.929rem;
+  font-size: 0.75rem;
+  font-weight: 600;
   cursor: pointer;
   -webkit-transition: color,1s, easy-in-out;
   transition: color,1s, easy-in-out;
 }
 
-header .wrap-access-type .access-type span:hover,
-header .wrap-access-type .access-type span:active {
+header .wrap-access-type .access-type span a:hover,
+header .wrap-access-type .access-type span a:active {
   color: #f4f750;
 }
 
@@ -1123,37 +1378,10 @@ header .setting {
 }
 
 header .setting .change-lang {
-  right: 240px;
   position: absolute;
-}
-
-header .setting .change-lang .en,
-header .setting .change-lang .ru {
-  display: none;
-}
-
-header .setting .change-lang span {
-  display: block;
-  width: 110px;
-  height: 48px;
-  line-height: 43px;
-  background: transparent;
-  color: #71797c;
-  font-weight: 600;
-  font-size: 1.2rem;
-  height: 48px;
-  text-indent: 14px;
-}
-
-header .setting .change-lang span:hover {
-  background: #dddf3c;
-  color: black;
-}
-
-header .setting .change-lang span:hover .en,
-header .setting .change-lang span:hover .ru {
-  display: block;
-  z-index: 2;
+  top: 0;
+  right: 240px;
+  z-index: 10;
 }
 
 header .setting .size-allfont {
@@ -1169,8 +1397,8 @@ header .setting .size-allfont {
 
 header .setting .size-allfont .font-minus {
   display: inline-block;
-  -webkit-transition: color, 0.5s, easy-in-out;
-  transition: color, 0.5s, easy-in-out;
+  -webkit-transition: color, 0.2s, easy-in-out;
+  transition: color, 0.2s, easy-in-out;
 }
 
 header .setting .size-allfont .font-minus:hover {
@@ -1190,8 +1418,8 @@ header .setting .size-allfont .font-minus .fa-minus {
 
 header .setting .size-allfont .font-plus {
   display: inline-block;
-  -webkit-transition: color, 0.5s, easy;
-  transition: color, 0.5s, easy;
+  -webkit-transition: color, 0.2s, easy;
+  transition: color, 0.2s, easy;
 }
 
 header .setting .size-allfont .font-plus:hover {
@@ -1220,7 +1448,7 @@ header .setting .size-allfont:hover .font-plus {
   padding-left: 10px;
   border-left: #929c9f solid 1px;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1200px) {
   header .setting .change-lang {
     right: 60px;
   }
@@ -1229,73 +1457,73 @@ header .setting .size-allfont:hover .font-plus {
     right: 180px;
   }
 
-  aside {
+  aside .wrap-aside {
     right: -192px;
     -webkit-transition: right, 1s, easy;
     transition: right, 1s, easy;
   }
 
-  aside:hover {
+  aside .wrap-aside:hover {
     right: 0;
   }
 
-  aside:hover .services .search-service,
-  aside:hover .contacts {
+  aside .wrap-aside:hover .services .search-service,
+  aside .wrap-aside:hover .contacts {
     right: 0;
   }
 
-  aside .services .search-service {
+  aside .wrap-aside .services .search-service {
     right: -192px;
     -webkit-transition: right, 1s, easy;
     transition: right, 1s, easy;
   }
 
-  aside .services .search-service:hover {
+  aside .wrap-aside .services .search-service:hover {
     right: 0;
   }
 
-  aside .services .search-service:hover .contacts,
-  aside .services .search-service:hover aside {
+  aside .wrap-aside .services .search-service:hover .contacts,
+  aside .wrap-aside .services .search-service:hover aside .wrap-aside {
     right: 0;
   }
 
-  aside .contacts {
+  aside .wrap-aside .contacts {
     right: -192px;
     -webkit-transition: right, 1s, easy;
     transition: right, 1s, easy;
   }
 
-  aside .contacts:hover {
+  aside .wrap-aside .contacts:hover {
     right: 0;
   }
 
-  aside .contacts:hover .services .search-service,
-  aside .contacts:hover aside {
+  aside .wrap-aside .contacts:hover .services .search-service,
+  aside .wrap-aside .contacts:hover aside {
     right: 0;
   }
 
   main .navigation .menu {
-    width: 80%;
+    width: 94%;
+  }
+
+  main .navigation .menu .inner-wrapper li {
+    font-size: 0.7rem;
+  }
+
+  main .navigation .menu .inner-wrapper .long-link {
+    width: 97px;
   }
 
   main .slider,
   main .table,
   main .loyalty-program,
   main .useful-info,
+  main .info,
   main .application,
   main .master-card,
   main .credit-program {
     width: -webkit-calc(100% - 60px);
     width: calc(100% - 60px);
-  }
-
-  main .info {
-    width: -webkit-calc(100% - 50px);
-    width: calc(100% - 50px);
-  }
-
-  main .info .map {
-    width: 30%;
   }
 
   main .useful-info {
@@ -1308,6 +1536,11 @@ header .setting .size-allfont:hover .font-plus {
 }
 
 @media only screen and (max-width: 1000px) {
+  footer .wrapper-footer ul {
+    margin-left: 0px !important;
+    margin-right: 8%;
+  }
+
   header .wrap-access-type #input-access-type {
     display: block;
   }
@@ -1320,19 +1553,23 @@ header .setting .size-allfont:hover .font-plus {
     display: block;
   }
 
-  main .credit-program p {
+  header .slider {
+    margin-top: 70px;
+  }
+
+  header .credit-program p {
     max-width: 330px;
   }
 
-  main .master-card h2 {
+  header .master-card h2 {
     max-width: 200px;
   }
 
-  main .master-card p {
+  header .master-card p {
     max-width: 300px;
   }
 
-  main .master-card .logo-master-card {
+  header .master-card .logo-master-card {
     display: none;
   }
 
@@ -1352,17 +1589,28 @@ header .setting .size-allfont:hover .font-plus {
 }
 
 @media only screen and (max-width: 860px) {
-  main .slider .additional-info {
+  main .navigation .menu {
+    width: 90%;
+  }
+
+  main .navigation .menu ul .inner-wrapper li:nth-child(4),
+  main .navigation .menu ul .inner-wrapper li:nth-child(5) {
     display: none;
+  }
+
+  main .slider {
+    height: 720px;
+  }
+
+  main .slider .additional-info {
+    display: block;
+    position: relative;
+    width: 100%;
+    left: 0;
   }
 
   main .slider .main-slider .proposal-2 .kartka {
     width: 400px;
-  }
-
-  main .info {
-    width: -webkit-calc(100% - 60px);
-    width: calc(100% - 60px);
   }
 
   main .info .info-deposit {
@@ -1375,6 +1623,13 @@ header .setting .size-allfont:hover .font-plus {
 }
 
 @media only screen and (max-width: 760px) {
+  main .slider .site-logo {
+    top: -45px;
+    left: 30px;
+    width: 180px;
+    height: 90px;
+  }
+
   main .slider .main-slider .proposal-1 h2,
   main .slider .main-slider .proposal-2 h2,
   main .slider .main-slider .proposal-3 h2 {
@@ -1383,6 +1638,16 @@ header .setting .size-allfont:hover .font-plus {
 
   main .useful-info {
     height: 600px;
+  }
+
+  main .master-card .picture-1 {
+    width: 210px;
+    right: 0px;
+  }
+
+  main .credit-program img {
+    width: 210px;
+    right: 0px;
   }
 
   footer .wrapper-footer .helpful-link {
@@ -1394,5 +1659,317 @@ header .setting .size-allfont:hover .font-plus {
     width: 80%;
     margin-left: 60px;
     padding-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  main .slider .main-slider .proposal-1 h2,
+  main .slider .main-slider .proposal-1 p {
+    padding-left: 20px !important;
+  }
+
+  main .slider .main-slider .proposal-1 h2 {
+    font-size: 2.5rem;
+  }
+
+  main .slider .main-slider .proposal-2 h2 {
+    padding-left: 20px !important;
+    font-size: 2.5rem;
+  }
+
+  main .slider .main-slider .proposal-2 .kartka {
+    width: 300px;
+    right: 20px;
+  }
+
+  main .slider .main-slider .proposal-3 h2 {
+    padding-left: 20px !important;
+    font-size: 2.5rem;
+  }
+
+  main .table .wrap-caption {
+    padding-left: 20px !important;
+  }
+
+  main .table .wrap-caption h2 {
+    padding-bottom: 20px;
+  }
+
+  main .table table {
+    padding-left: 20px !important;
+  }
+
+  main .table table tr {
+    padding-bottom: 5px;
+  }
+
+  main .table table tr th {
+    font-size: 0.6rem;
+  }
+
+  main .table table tr td {
+    font-size: 0.8rem;
+  }
+
+  main .table button {
+    width: 270px;
+    padding-left: 20px !important;
+  }
+
+  main .application div {
+    width: 455px;
+  }
+
+  main .application div select,
+  main .application div input[type="submit"] {
+    width: 454px;
+  }
+
+  main .application div input {
+    width: 450px;
+  }
+
+  main .useful-info,
+  main .info-deposit,
+  main .loyalty-program {
+    padding-left: 20px !important;
+  }
+
+  main .master-card {
+    padding-left: 20px;
+  }
+
+  main .master-card p {
+    z-index: 2;
+    position: relative;
+  }
+
+  main .master-card .picture-1 {
+    width: 170px;
+    right: -60px;
+  }
+
+  main .master-card h2 {
+    font-size: 1.8rem;
+    max-width: 310px;
+  }
+
+  main .credit-program {
+    padding-left: 20px;
+  }
+
+  main .credit-program p {
+    z-index: 2;
+    position: relative;
+  }
+
+  main .credit-program h2 {
+    font-size: 1.8rem;
+    max-width: 310px;
+  }
+
+  main .credit-program img {
+    width: 170px;
+    right: -60px;
+  }
+
+  footer .wrapper-footer {
+    max-width: 80%;
+    margin-left: 20px;
+  }
+
+  .select#selectedCurrency {
+    display: none;
+  }
+
+  .table-button {
+    margin-left: 0;
+    width: 316px;
+  }
+
+  .info .map-button {
+    display: none;
+  }
+
+  .slider {
+    width: 100% !important;
+  }
+
+  .slick-list {
+    width: 100%;
+  }
+
+  main {
+    overflow-x: hidden;
+  }
+
+  main .slider .site-logo {
+    top: -9px;
+  }
+
+  .access-type {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  header .wrap-access-type .access-type {
+    width: 100px;
+  }
+
+  main .info {
+    height: 615px;
+  }
+
+  main .useful-info {
+    height: 725px;
+  }
+
+  main .application {
+    height: 750px;
+  }
+
+  main .application div {
+    width: 355px;
+  }
+
+  main .application div select,
+  main .application div input[type="submit"] {
+    width: 354px;
+  }
+
+  main .application div input {
+    width: 350px;
+  }
+
+  main .table button {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  aside .wrap-aside {
+    display: none;
+  }
+
+  main .slider .site-logo {
+    left: 15px;
+    width: 150px;
+  }
+
+  main .slider,
+  main .table,
+  main .loyalty-program,
+  main .useful-info,
+  main .info,
+  main .master-card,
+  main .credit-program {
+    width: -webkit-calc(100% - 20px);
+    width: calc(100% - 20px);
+  }
+
+  main .slider .main-slider .proposal-2 .kartka {
+    width: 260px;
+  }
+
+  main .slider .main-slider .proposal-3 h2 {
+    padding-left: 0px !important;
+  }
+
+  main .table .wrap-caption {
+    padding-top: 0px;
+  }
+
+  main .table table {
+    width: 100%;
+  }
+
+  main .loyalty-program {
+    padding-top: 0px;
+    padding-bottom: 20px;
+  }
+
+  main .useful-info {
+    padding-top: 20px;
+  }
+
+  main .application {
+    width: 100%;
+    height: 420px;
+  }
+
+  main .application div {
+    width: 90%;
+  }
+
+  main .application div form {
+    display: none;
+  }
+
+  main .application div button {
+    display: block;
+    height: 60px;
+    font-size: 1.5rem;
+    border: 2px solid #dcdf3c;
+    background: white;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  main .application div .pre-registration {
+    width: 100%;
+  }
+
+  main .application div .checked {
+    background: white;
+    width: 100%;
+  }
+
+  main .addition {
+    display: block;
+  }
+
+  main .master-card {
+    margin-top: 5px;
+  }
+
+  main .master-card .logo-master-card {
+    width: 120px;
+  }
+
+  main .wrap-checked {
+    height: 48px !important;
+  }
+
+  main .navigation .menu input[type="checkbox"]:checked + ul {
+    height: 100vh !important;
+    display: block;
+    background: #dce123;
+  }
+
+  main .navigation .menu ul {
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+  }
+
+  main .navigation .menu ul .inner-wrapper li {
+    height: -webkit-calc((100vh - 56px ) / 5);
+    height: calc((100vh - 56px ) / 5);
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 5;
+  }
+
+  footer .wrapper-footer .footer-link li img {
+    width: 35px;
+    height: 35px;
+    background-position-y: 70px;
+    background-size: 70px;
+  }
+
+  footer .wrapper-footer .footer-link li img:hover {
+    background-position-y: 35px;
   }
 }

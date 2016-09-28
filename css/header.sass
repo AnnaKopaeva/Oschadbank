@@ -8,6 +8,7 @@ header
 	background: #161a1b
 	font-family: 'Roboto', sans-serif
 	.wrap-access-type
+		font-family: 'PT Sans', sans-serif
 		width: 180px
 		height: 48px
 		input
@@ -27,41 +28,24 @@ header
 			font-weight: 500
 			// text-align: center
 			span 
-				color: #71797c
-				text-transform: uppercase
-				margin-left: 30px
-				font-size: 0.929rem
-				cursor: pointer
-				transition: color,1s, easy-in-out
-				&:hover, &:active
-					color: #f4f750
+				a
+					color: #71797c
+					text-decoration: none
+					text-transform: uppercase
+					margin-left: 30px
+					font-size: 0.75rem
+					font-weight: 600
+					cursor: pointer
+					transition: color,1s, easy-in-out
+					&:hover, &:active
+						color: #f4f750
 	.setting
-		font-family: 'PT Sans', sans-serif
 		.change-lang
-			right: 240px
 			position: absolute
-			.en, .ru
-				display: none
-			span
-				display: block
-				width: 110px 
-				height: 48px
-				line-height: 43px
-				background: transparent
-				color: #71797c
-				font-weight: 600
-				font-size: 1.2rem
-				height: 48px
-				text-indent: 14px
-				&:hover
-					background: #dddf3c
-					color: black
-					.en, .ru
-						display: block
-						z-index: 2
-				// &:focus
-				// 	background: #f4f750
-				// 	color: black
+			top: 0
+			right: 240px
+			z-index: 10
+		font-family: 'PT Sans', sans-serif
 		.size-allfont
 			color: #929c9f
 			cursor: pointer
@@ -73,7 +57,7 @@ header
 			line-height: 30px
 			.font-minus
 				display: inline-block
-				transition: color, 0.5s, easy-in-out
+				transition: color, 0.2s, easy-in-out
 				&:hover
 					color: #f4f750
 				i 
@@ -87,7 +71,7 @@ header
 				&:hover
 					color: #f4f750
 				display: inline-block
-				transition: color, 0.5s, easy
+				transition: color, 0.2s, easy
 				.fa-font 
 					font-size: 1.4rem 
 				.fa-plus

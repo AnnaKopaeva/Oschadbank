@@ -1,16 +1,29 @@
 main
 	font-family: 'Roboto', sans-serif
 	box-sizing: border-box
+	.wrap-checked 
+		height: 0px
+		overflow: hidden
+		background: #161a1b
+		width: 50px
+		position: absolute
+		top: 0
+		right: 0
+		label[for="ch"] i
+			font-size: 2rem
+			line-height: 42px
+			color: #dce123
+			padding-left: 13px
 	.navigation
 		width: 100%
-		// height: 72px
 		position: relative
-		z-index: 1
+		z-index: 3
 		.menu
 			perspective: 1000px
-			width: 1000px
-			// float: right
-			right: -240px
+			width: auto
+			margin-right: 250px;
+			input[type="checkbox"]
+				display: none
 			ul 
 				list-style: none
 				display: block
@@ -20,21 +33,22 @@ main
 				.inner-wrapper
 					display: inline-block
 					position: relative
+				.inner-wrapper>li
+					text-align: center
+					text-transform: uppercase
 				li
 					display: inline-block
-					width: 100px
+					padding: 0 14px
 					height: 36px
 					line-height: 36px
 					transition: background .3s
 					cursor: pointer
-					text-align: center
-					text-transform: uppercase
 					font-weight: bold
 					font-size: .88rem
 					letter-spacing: 1px
 					vertical-align: middle
-
 					.menu__popup
+						text-transform: none
 						transform-origin: center top
 						transform: rotateX(-87deg)
 						overflow: hidden
@@ -45,8 +59,65 @@ main
 						background: #dcdf3c
 						visibility: hidden
 						transition: visibility 0s linear 0.3s, transform 0.3s
-						z-index: 2
-
+						z-index: 4
+						text-align: left
+						padding-left: 0px
+						width: 100%
+						text-indent: 15px
+						ul
+							li
+								ul
+									p
+										font-size: 0.85rem
+										color: #a8aa2a
+										font-weight: 600
+										padding-top: 10px
+									li
+										display: block
+										font-size: 1rem
+										width: 100%
+										background-image: linear-gradient(to left, transparent, transparent 50%, #f4f750 50%, #f4f750)
+										background-position: 100% 0
+										background-size: 200% 100%
+										transition: all .25s ease-in
+										&:hover
+											background-position: 0 0
+										a
+											font-weight: 600
+									.last
+										margin-bottom: 10px
+					.menu__popup.deposit
+						width: 290px
+						height: 315px
+						ul
+							li
+							.butt
+								padding-top: 20px
+								border-top: 1px solid #c2c52e
+								background-image: none
+								a
+									margin-left: 15px
+									display: block
+									margin-bottom: 20px
+									background: #c2c52e
+									width: 260px
+									height: 50px
+									font-size: 1.1rem
+									text-align: center
+									line-height: 50px
+									text-transform: none
+					.menu__popup.search
+						input
+							display: block !important
+						.grid
+							height: 500px
+							.grid-item
+								display: block
+								height: 500px
+								ul
+									li
+										height: auto !important
+										width: 25% !important
 					&:hover
 						background: #dcdf3c
 						.menu__popup
@@ -58,17 +129,7 @@ main
 					a
 						text-decoration: none
 						color: #000
-				// li
-				// 	display: inline-block
-				// 	width: 100px
-				// 	height: 50px
-				// 	&:hover
-				// 		ul
-				// 			div
-				// 				// display: block
-				// 	ul
-				// 		div
-				// 			display: none
+						width: 100px
 	.slider
 		position: relative
 		width: calc(100% - 260px)
@@ -195,24 +256,11 @@ main
 					color: #bdbdbd
 					font-size: 0.714rem
 					padding-bottom: 20px
-
 				td 
+					font-size: 1rem
 					text-align: center
 					&:first-child
 						text-align: left
-		button
-			width: 320px
-			height: 48px
-			margin-top: 40px
-			margin-left: 60px
-			border: 2px solid #7196da
-			background: transparent
-			outline: none
-			transition: background, 1s, easy
-			&:hover
-				background: #7196da
-			&:active
-				background: #557dc8
 	.loyalty-program
 		padding-left: 60px
 		padding-top: 88px
@@ -244,13 +292,15 @@ main
 		width: calc(100% - 260px)
 		height: 489px
 		overflow: hidden
+		position: relative
 		.info-deposit
-			width: 62%
+			width: 68%
 			padding-left: 60px
 			background: #7196da
 			float: left
 			display: inline-block
 			height: 100%
+			box-sizing: border-box
 			h2
 				font-weight: 600
 				font-size: 2rem
@@ -277,7 +327,30 @@ main
 			float: left
 			display: inline-block
 			height: 100%
+			position: relative
 			clear:right
+		.map-button
+			position: absolute
+			bottom: 18px
+			right: 15px
+			width: 300px
+			a
+				text-decoration: none
+				color: #000
+			// div
+			// 	position: absolute
+			// 	top: 20px
+			// 	width: 100px
+			// 	margin: auto
+			// 	height: 50px
+			// 	border: 2px solid #7196da
+			// 	background: transparent
+			// 	outline: none
+			// 	transition: all .25s ease-in
+			// 	&:hover
+			// 		background: #7196da
+			// 	&:active
+			// 		background: #557dc8
 	.useful-info
 		padding-left: 60px
 		padding-top: 88px
@@ -295,8 +368,7 @@ main
 			font-weight: 600
 			font-size: 1.2rem
 			padding-bottom: 15px
-		p 
-			// padding-top: 33px
+		p
 			font-size: 1rem
 			max-width: 434px
 			margin: 0
@@ -341,8 +413,8 @@ main
 				margin-bottom: 43px
 				font-weight: 500
 				outline: none
-				&:nth-child(3)
-					width: 200px
+			.pre-registration
+				width: 200px
 			.checked
 				background: #dcdf3c
 				width: 122px
@@ -372,15 +444,23 @@ main
 				transition: opacity 0.3s ease
 			input[type="submit"]
 				border: 2px solid #dcdf3c
-				background: white
 				box-sizing: border-box
 				width: 544px
-				transition: background, 1s, easy
 				outline: none
+				background-image: linear-gradient(to bottom, transparent, transparent 50%, #dcdf3c  50%, #dcdf3c )
+				background-position-y: 0
+				background-size: 200%
+				transition: all .25s ease-in
 				&:hover
-					background: #dcdf3c
-				&:active
-					background: #a8aa2a
+					background-position-y: 100%
+	.addition
+		display: none
+		padding-left: 20px
+		margin: 0
+		font-weight: 600
+		font-size: 2rem
+		padding-top: 20px
+		color: #4b5153
 	.master-card
 		width: calc(100% - 260px)
 		height: 300px
@@ -391,6 +471,7 @@ main
 		box-sizing: border-box
 		color: white
 		position: relative
+		overflow: hidden
 		h2
 			padding-left: 0
 			margin: 0
@@ -400,6 +481,7 @@ main
 		p 
 			padding-bottom: 70px
 			margin: 0
+			line-height: 23px
 		.logo-master-card
 			width: 153px
 			position: absolute
@@ -420,6 +502,7 @@ main
 		color: white
 		margin-bottom: 20px
 		position: relative
+		overflow: hidden
 		h2
 			padding-left: 0
 			margin: 0
@@ -450,19 +533,120 @@ em.error
 	top: -20px
 	right: 10px
 	position: relative
-// search 
-.search
-	text-align: left !important
-	input
-		display: block !important
-	li
-		height: auto !important
-		width: 33% !important
+
+.table-button
+	width: 320px
+	height: 48px
+	display: inline-block
+	line-height: 48px
+	text-align: center
+	margin-top: 40px
+	margin-left: 60px
+	border: 2px solid #7196da
+	background: none
+	outline: none
+	background-image: linear-gradient(to bottom, #fff, #fff 50%, #7196da  50%, #7196da )
+	background-position-y: 0
+	background-size: 200%
+	transition: all .25s ease-in
+	font-weight: bold
+	&:hover
+		background-position-y: 100%
+
+.select#selectedCurrency
+	display: inline-block
+	position: absolute
+	height: 40px
+	outline: 2px solid #7196da
+	&:hover
+		height: auto
+		outline: 0px solid #dddf3c
 	ul
-		display: inline-block !important
-		text-align: left !important
-		border: 1px solid
-		float: left
+		margin-top: -4px;
+		&:first-child
+			&:hover
+				height: auto
 		li
-			height: auto !important
-			text-align: left !important
+			&:first-child
+				&:after
+					position: absolute
+					content: ""
+					top: 16px
+	a
+		color: #000
+		display: block
+		height: 100%
+		width: 100%
+
+
+.select
+	overflow: hidden
+	height: 48px
+	width: 110px
+	line-height: 43px
+	background: transparent
+	color: #929c9f
+	font-weight: 600
+	font-size: 1.2rem
+	text-indent: 10px
+	&:hover
+		background: #dddf3c
+		color: black
+		height: auto
+		a
+			color: #000
+		li:first-child:after
+			border-top: 6px solid #000
+	ul
+		list-style: none
+		padding: 0
+		margin: 0
+		li
+			height: 48px
+			background-image: linear-gradient(to left, transparent, transparent 50%, #f4f750 50%, #f4f750)
+			background-position: 100% 0
+			background-size: 200% 100%
+			transition: all .25s ease-in
+			display: block
+			a
+				text-decoration: none
+				color: #929c9f
+			&:hover
+				background-position: 0 0
+
+			&:first-child
+				&:after
+					position: absolute
+					content: ""
+					top: 20px
+					right: 4px
+					width: 0
+					height: 0
+					border-left: 4px solid transparent
+					border-right: 4px solid transparent
+					border-top: 6px solid #929c9f
+			&:first-child
+				&:hover
+				background-image: linear-gradient(to left, transparent, transparent 50%, #f4f750 50%, #f4f750)
+				background-position: 100% 0
+				background-size: 200% 100%
+	span
+		display: block
+		width: 110px 
+		height: 48px
+		line-height: 43px
+		background: transparent
+		color: #71797c
+		font-weight: 600
+		font-size: 1.2rem
+		height: 48px
+		text-indent: 14px
+		&:hover
+			background: #dddf3c
+			color: black
+			.en, .ru
+				display: block
+				z-index: 2
+
+.hidden
+	display: none
