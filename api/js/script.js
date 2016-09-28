@@ -129,7 +129,8 @@ $('.font-plus').click(function() {
 });
 
 // search
-$('.search #search').keyup(function () {  
+$('.search #search').keyup(function () {
+  $('.grid').css('minHeight', 'auto');
   $('.search li').each(function (index) {
     var nameTag = $(this).text().toLowerCase(),
         searchStr = $('.search #search').val().toLowerCase();
