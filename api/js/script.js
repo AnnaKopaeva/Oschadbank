@@ -169,6 +169,11 @@ $('a.uah').click(function() {
   $('table.uah').show();
   $('table.usd').hide();
 });
+$('.search-img-two').click(function () {
+  $('.search input').val('');
+  $('.grid li').show();
+  changeGrid();
+})
 
 
 

@@ -419,6 +419,18 @@ main .navigation .menu ul li .menu__popup.deposit {
 main .navigation .menu ul li .menu__popup.deposit ul li {
   display: block;
   margin-left: -15px;
+  width: 290px;
+  background-image: -webkit-gradient(linear, right top, left top, from(transparent), color-stop(50%, transparent), color-stop(50%, #f4f750), color-stop(50%, #f4f750));
+  background-image: -webkit-linear-gradient(right, transparent, transparent 50%, #f4f750 50%, #f4f750);
+  background-image: linear-gradient(to left, transparent, transparent 50%, #f4f750 50%, #f4f750);
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  -webkit-transition: all .25s ease-in;
+  transition: all .25s ease-in;
+}
+
+main .navigation .menu ul li .menu__popup.deposit ul li:hover {
+  background-position: 0% 0;
 }
 
 main .navigation .menu ul li .menu__popup.deposit ul .butt {
@@ -470,6 +482,18 @@ main .navigation .menu ul li .menu__popup.cart li li {
   max-width: 100%;
   width: 49%;
   vertical-align: top;
+  width: 290px;
+  background-image: -webkit-gradient(linear, right top, left top, from(transparent), color-stop(50%, transparent), color-stop(50%, #f4f750), color-stop(50%, #f4f750));
+  background-image: -webkit-linear-gradient(right, transparent, transparent 50%, #f4f750 50%, #f4f750);
+  background-image: linear-gradient(to left, transparent, transparent 50%, #f4f750 50%, #f4f750);
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  -webkit-transition: all .25s ease-in;
+  transition: all .25s ease-in;
+}
+
+main .navigation .menu ul li .menu__popup.cart li li:hover {
+  background-position: 0% 0;
 }
 
 main .navigation .menu ul li .menu__popup.search input {
@@ -482,8 +506,8 @@ main .navigation .menu ul li .menu__popup.search input {
 }
 
 main .navigation .menu ul li .menu__popup.search .grid {
-  min-height: 298px;
-  max-width: 100%;
+  min-height: 320px;
+  max-width: 101%;
 }
 
 main .navigation .menu ul li .menu__popup.search .grid .grid-item {
@@ -499,6 +523,18 @@ main .navigation .menu ul li .menu__popup.search .grid .grid-item p {
 
 main .navigation .menu ul li .menu__popup.search .grid .grid-item ul li {
   height: auto !important;
+  width: 100%;
+  background-image: -webkit-gradient(linear, right top, left top, from(transparent), color-stop(50%, transparent), color-stop(50%, #f4f750), color-stop(50%, #f4f750));
+  background-image: -webkit-linear-gradient(right, transparent, transparent 50%, #f4f750 50%, #f4f750);
+  background-image: linear-gradient(to left, transparent, transparent 50%, #f4f750 50%, #f4f750);
+  background-position: 100% 0;
+  background-size: 201% 100%;
+  -webkit-transition: all .25s ease-in;
+  transition: all .25s ease-in;
+}
+
+main .navigation .menu ul li .menu__popup.search .grid .grid-item ul li:hover {
+  background-position: 0% 0;
 }
 
 main .navigation .menu ul li .search-img-two {
