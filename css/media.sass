@@ -44,38 +44,62 @@
 			p 
 				max-width: 585px
 @media only screen and (max-width: 1000px)
-	footer
-		.wrapper-footer
+	header 
+		.type
+			width: 200px!important
+			margin-left: 45px
+			z-index: 5
+			position: relative
 			ul
-				margin-left: 0px!important
-				margin-right: 8%
-	header
-		.wrap-access-type
-			#input-access-type
-				display: block
-			.access-type
-			
-				span
-					width: 238px 
-					height: 48px
-					color: #dddf3c
-					font-size: 1.2rem
-					display: block
-		.slider
-			margin-top: 70px
+				width: 200px!important
+				font-size: 0.9rem
+				text-indent: 0
+				li
+					a
+						color: #dddf3c!important
+					&:first-child
+						&:after
+							border-top: 6px solid #dddf3c!important
+				&:hover
+					li
+						&:first-child
+							&:after
+								border-top: 6px solid #000 !important
+					a
+						color: black!important
+
+	main 
+		.navigation
+			.menu 
+				ul 
+					li 
+						padding: 0 4px!important
+						letter-spacing: 0.5px
+						.menu__popup.cart
+							width: 100%
+						.menu__popup.search 
+							.grid 
+								min-height: 475px
+								.grid-item
+									max-width: 36%
+		// .slider
+		// 	margin-top: 70px
 		.credit-program
 			p
 				max-width: 330px
 		.master-card
 			h2
 				max-width: 200px
-			p 
+			p
 				max-width: 300px
 			.logo-master-card
 				display: none
 	footer
 		.wrapper-footer
 			min-width: 0px
+			ul
+				margin-left: 0px!important
+				margin-right: 8%
 			.footer-link
 				width: 38%
 				margin-left: 20px
@@ -92,6 +116,10 @@
 						li
 							&:nth-child(4), &:nth-child(5)
 								display: none
+							.menu__popup.search 
+								.grid
+									.grid-item
+										max-width: 50%
 		.slider 
 			height: 720px
 			.additional-info
@@ -109,9 +137,22 @@
 			.map 
 				display: none
 
-@media only screen and (max-width: 760px) 
+@media only screen and (max-width: 768px) 
+	.sm-blue 
+			a 
+				.sub-arrow
+					right: 55px!important
 	main 
+		top: -40px
+		position: relative
+		.navigation 
+			.menu
+				.mobil-menu
+					display: block 
+				.expanded-menu
+					display: none
 		.slider 
+			margin-top: 64px
 			.site-logo
 				top: -45px
 				left: 30px
@@ -140,8 +181,16 @@
 				margin-left: 60px
 				padding-bottom: 30px
 @media only screen and (max-width: 650px) 
+	header
+		.access-type
+			display: none
 	main 
+		overflow-x: hidden
 		.slider 
+			width: 100% !important
+			margin-top: 28px
+			.site-logo
+				top: -9px
 			.main-slider 
 				.proposal-1
 					h2, p
@@ -173,9 +222,12 @@
 						font-size: 0.6rem
 					td 
 						font-size: 0.8rem
-			button
-				width: 270px
-				padding-left: 20px!important
+			.table-button
+				margin-left: 0
+				width: 316px
+		.info 
+			.map-button
+				display: none
 		.application 
 			div 
 				width: 455px
@@ -213,26 +265,17 @@
 			margin-left: 20px
 	.select#selectedCurrency
 		display: none
-	.table-button
-		margin-left: 0
-		width: 316px
-	.info .map-button
-		display: none
-	.slider
-		width: 100% !important
 	.slick-list
 		width: 100%
-	main
-		overflow-x: hidden
-	main .slider .site-logo
-		top: -9px
-	.access-type
-		display: none
 @media only screen and (max-width: 550px) 
 	header 
-		.wrap-access-type 
-			.access-type
-				width: 100px
+		.access-type
+			width: 100px
+		.type
+			width: 150px !important
+			ul
+				width: 150px !important
+				font-size: 0.74rem
 	main 
 		.info 
 			height: 615px
@@ -250,9 +293,22 @@
 			button
 				display: none
 @media only screen and (max-width: 425px)
+	.select
+		font-size: 1rem
+		width: 92px
+	header 
+		.setting 
+			.change-lang
+				right: 10px
+			.size-allfont
+				display: none
 	aside
 		.wrap-aside
 			display: none
+	.sm-blue 
+			a
+				.sub-arrow
+					right: 4px!important
 	main
 		.slider 
 			.site-logo
@@ -304,25 +360,6 @@
 			margin-top: 5px
 			.logo-master-card
 				width: 120px
-		.wrap-checked
-			height: 48px!important
-		.navigation
-			.menu
-				input[type="checkbox"]
-					&:checked + ul
-						height: 100vh!important
-						display: block
-						background: #dce123
-				ul
-					height: 0
-					overflow: hidden
-					transition: all 0.5s ease-out
-					.inner-wrapper
-						li
-							height: calc((100vh - 56px ) / 5)
-							display: block
-							background: rgba(255, 255, 255, 0.8)
-							z-index: 5
 	footer 
 		.wrapper-footer 
 			.footer-link 

@@ -3,27 +3,21 @@ main
 	box-sizing: border-box
 	.wrap-checked 
 		height: 0px
-		overflow: hidden
+		// overflow: hidden
 		background: #161a1b
-		width: 50px
 		position: absolute
 		top: 0
 		right: 0
-		label[for="ch"] i
-			font-size: 2rem
-			line-height: 42px
-			color: #dce123
-			padding-left: 13px
 	.navigation
 		width: 100%
 		position: relative
 		z-index: 3
+		#main-menu
+			display: none
 		.menu
 			perspective: 1000px
 			width: auto
-			margin-right: 250px;
-			input[type="checkbox"]
-				display: none
+			margin-right: 250px
 			ul 
 				list-style: none
 				display: block
@@ -178,26 +172,26 @@ main
 										transition: background .25s ease-in
 										&:hover
 											background-position: 0% 0
-					.search-img-two
-						width: 30px
-						position: absolute
-						position: absolute
-						right: 10px
-						top: 5px
-						background: #c2c52e
-						border-radius: 50%
-						transition: background .2s
-						&:hover
-							background: #f4f750
-					.search-img-one
-						width: 18px
-						position: absolute
-						left: 10px
-						top: 15px
-					#search
-						width: 100%
-						min-width: 100%
-						box-sizing: border-box
+						.search-img-two
+							width: 30px
+							position: absolute
+							position: absolute
+							right: 10px
+							top: 5px
+							background: #c2c52e
+							border-radius: 50%
+							transition: background .2s
+							&:hover
+								background: #f4f750
+						.search-img-one
+							width: 18px
+							position: absolute
+							left: 10px
+							top: 15px
+						#search
+							width: 100%
+							min-width: 100%
+							box-sizing: border-box
 					&:hover
 						background: #dcdf3c
 						.menu__popup
@@ -205,14 +199,15 @@ main
 							transform: rotateX(0)
 							transition: visibility 0s linear 0s,  transform 0.3s
 							z-index: 3
-
 					a
 						text-decoration: none
 						color: #000
 						width: 100px
+
 	.slider
 		position: relative
 		width: calc(100% - 260px)
+		margin-top: 26px
 		.site-logo
 			position: absolute
 			top: -52px
@@ -400,7 +395,6 @@ main
 				span 
 					font-size: 1.5rem
 					font-weight: 600
-
 		.map 
 			width: 32%
 			background: #eee
@@ -417,20 +411,6 @@ main
 			a
 				text-decoration: none
 				color: #000
-			// div
-			// 	position: absolute
-			// 	top: 20px
-			// 	width: 100px
-			// 	margin: auto
-			// 	height: 50px
-			// 	border: 2px solid #7196da
-			// 	background: transparent
-			// 	outline: none
-			// 	transition: all .25s ease-in
-			// 	&:hover
-			// 		background: #7196da
-			// 	&:active
-			// 		background: #557dc8
 	.useful-info
 		padding-left: 60px
 		padding-top: 88px
@@ -454,7 +434,6 @@ main
 			margin: 0
 			line-height: 23px
 			padding-bottom: 30px
-
 			span
 				text-transform: uppercase
 		ul
@@ -613,7 +592,6 @@ em.error
 	top: -20px
 	right: 10px
 	position: relative
-
 .table-button
 	width: 320px
 	height: 48px
@@ -632,7 +610,6 @@ em.error
 	font-weight: bold
 	&:hover
 		background-position-y: 100%
-
 .select#selectedCurrency
 	display: inline-block
 	position: absolute
@@ -657,8 +634,6 @@ em.error
 		display: block
 		height: 100%
 		width: 100%
-
-
 .select
 	overflow: hidden
 	height: 48px
@@ -693,7 +668,6 @@ em.error
 				color: #929c9f
 			&:hover
 				background-position: 0 0
-
 			&:first-child
 				&:after
 					position: absolute
@@ -710,23 +684,76 @@ em.error
 				background-image: linear-gradient(to left, transparent, transparent 50%, #f4f750 50%, #f4f750)
 				background-position: 100% 0
 				background-size: 200% 100%
-	span
-		display: block
-		width: 110px 
-		height: 48px
-		line-height: 43px
-		background: transparent
-		color: #71797c
-		font-weight: 600
-		font-size: 1.2rem
-		height: 48px
-		text-indent: 14px
-		&:hover
-			background: #dddf3c
-			color: black
-			.en, .ru
-				display: block
-				z-index: 2
-
 .hidden
 	display: none
+.main-menu-btn 
+	position: relative
+	display: inline-block
+	width: 28px
+	height: 28px
+	left: 10px
+	text-indent: 28px
+	white-space: nowrap
+	overflow: hidden
+	cursor: pointer
+	-webkit-tap-highlight-color: rgba(0,0,0,0)
+/* hamburger icon */
+.main-menu-btn-icon, .main-menu-btn-icon:before, .main-menu-btn-icon:after 
+	position: absolute
+	top: 50%
+	left: 2px
+	height: 2px
+	width: 24px
+	background: #bbb
+	-webkit-transition: all 0.25s
+	transition: all 0.25s
+
+.main-menu-btn-icon:before 
+	content: ''
+	top: -7px
+	left: 0
+
+.main-menu-btn-icon:after 
+	content: ''
+	top: 7px
+	left: 0
+
+/* x icon */
+#main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon 
+	height: 0
+	background: transparent
+
+#main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon:before 
+	top: 0
+	-webkit-transform: rotate(-45deg)
+	transform: rotate(-45deg)
+
+#main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon:after 
+	top: 0
+	-webkit-transform: rotate(45deg)
+	transform: rotate(45deg)
+
+/* hide menu state checkbox (keep it visible to screen readers) */
+#main-menu-state 
+	position: absolute
+	width: 1px
+	height: 1px
+	margin: -1px
+	border: 0
+	padding: 0
+	overflow: hidden
+	clip: rect(1px,1px,1px,1px)
+
+/* hide the menu in mobile view */
+#main-menu-state:not(:checked) ~ #main-menu 
+	display: none
+
+#main-menu-state:checked ~ #main-menu 
+	display: block
+
+@media (min-width: 768px)
+	.main-menu-btn 
+		position: absolute
+		top: -99999px
+	// #main-menu-state:not(:checked) ~ #main-menu 
+	// 	display: block

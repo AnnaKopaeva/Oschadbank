@@ -62,32 +62,16 @@ $('#form').submit(function (){
   return false;
 });
 
-var mq = window.matchMedia("(max-width: 1000px)");
+$('header div:first').removeClass('select');
 
+var mq = window.matchMedia("(max-width: 1000px)");
 function changeAccess(mq) {
   if (mq.matches) {
-    $('#input-access-type').val("Особистий");
-
-    $('.access-type').hide();
-
-$('#input-access-type').focus(function(){
-    $('.access-type').show();
-});
-
-$('#content span').click(function(){
-    $('#input-access-type').val($(this).html())
-    $('.access-type').hide();
-});
-
-$(window).click(function(){
-    if ($("#input-access-type").is(":focus")) {
-    }
-    else {
-        $('.access-type').hide();
-    }            
-});
+    $('header div:first').addClass('select');
+    $('header div:first').removeClass('access-type');
   } 
 }
+changeAccess(mq);
 
 //change size of font
 var fontSize = $.cookie('fontSize');
@@ -175,5 +159,6 @@ $('.search-img-two').click(function () {
   changeGrid();
 })
 
-
-
+$(function() {
+  $('#main-menu').smartmenus();
+});

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Document</title>
+	<title>Bank</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/4.1.1/normalize.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=cyrillic" rel="stylesheet">
@@ -11,17 +11,17 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/elusive-icons.min.css">
 	<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
-
+	<link href='css/sm-core-css.css' rel='stylesheet' type='text/css' media="only screen and (max-width: 768px)" />
+	<link href='css/sm-blue.css' rel='stylesheet' type='text/css' media="only screen and (max-width: 768px)" />
 </head>
 <body>
 	<header>
-		<div class="wrap-access-type">
-			<input type="text" id="input-access-type" name="input" >
-			<div class="access-type ">
-				<span class="chek-type"><a href="">Особистий</a></span>
-				<span><a href="">Малий та середній бізнес</a></span>
-				<span><a href="">Корпоративний</a></span>
-			</div>
+		<div class="access-type type select ">
+			<ul>
+				<li class="chek-type"><a href="#">Особистий</a></li>
+				<li><a href="#">Малий та середній бізнес</a></li>
+				<li><a href="#">Корпоративний</a></li>
+			</ul>
 		</div>
 		<div class="setting">
 			<div class="change-lang select">
@@ -75,80 +75,181 @@
 		</div>
 	</aside>
 	<main>
-		<div class="wrap-checked">
-			<label for="ch"><i class="fa fa-bars" aria-hidden="true"></i></label>
-		</div>
 		<div class="navigation">
+			<input id="main-menu-state" type="checkbox" />
+			<label class="main-menu-btn" for="main-menu-state">
+				<span class="main-menu-btn-icon"></span> 
+			</label>
+			<ul class="sm sm-blue" id="main-menu"> 
+				<li>
+					<a href="#">Депозити</a>
+					<ul>
+						<li><a href="#">Класичний</a></li>
+						<li><a href="#">Капітал</a></li>
+						<li><a href="#">Гнучкий</a></li>
+						<li class="last"><a href="#" >Пенсійний</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Кредити</a>
+				</li>
+				<li>
+					<a href="#">Платіжні картки</a>
+					<ul>
+						<li><a href="#">Моя картка</a></li>
+						<li><a href="#">Зарплатна картка</a></li>
+						<li><a href="#">Соціальна картка</a></li>
+						<li><a href="#">Корпоративна картка</a></li>
+						<li><a href="#">Стандартна картка</a></li>
+						<li><a href="#">Пенсійна картка</a></li>
+						<li><a href="#">Картка Киянина</a></li>
+						<li><a href="#">Кобрендова картка «віді автосіті» та wog</a></li>
+						<li><a href="#">Економна картка</a></li>
+						<li><a href="#">Арсенал</a></li>
+						<li><a href="#">Муніципальна картка</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Корисна інформація</a>
+					<ul>
+						<li><a href="#">Договір, тарифи, інше</a></li>
+						<li><a href="#">Курси БПК</a></li>
+						<li><a href="#">Новини та акції</a></li>
+					</ul>
+				</li>
+				<li >
+					<a href="#">Авто в кредит</a>
+					<ul>
+						<li><a href="#">На електромобілі</a></li>
+						<li><a href="#">На нові авто</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Нерухомість в кредит</a>
+					<ul>
+						<li><a href="#">Нерухомість на вторинному ринку</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Кредит під заставу або поруку</a>
+					<ul>
+						<li><a href="#">Кредит під іпотеку</a></li>
+						<li><a href="#">Кредит під поруку</a></li>
+						<li><a href="#">Кредит під депозит</a></li>
+					</ul>
+				</li>
+				 <li>
+				 	<a href="#">Платежі</a>
+				 </li>
+				 <li>
+				 	<a href="#">Перекази</a>
+				 </li>
+				 <li>
+				 	<a href="#">про Ощадбанк</a>
+					<ul>
+						<li><a href="#">Інформація про банк</a></li>
+						<li><a href="#">Наглядова рада</a></li>
+				 		<li><a href="#">Правління банку</a></li>
+				 		<li><a href="#">Звітність</a></li>
+				 		<li><a href="#">Майно на продаж</a></li>
+				 		<li><a href="#">Маніфест Банку</a></li>
+				 		<li><a href="#">Кар'єра</a></li>
+					</ul>
+				</li>
+				<li>
+				 	<a href="#">інші послуги</a>
+					<ul>
+						<li><a href="#">Валюто-обмінні операції</a></li>
+				 		<li><a href="#">Поточні рахунки</a></li>
+				 		<li><a href="#">Індивідуальні сейфи</a></li>
+				 		<li><a href="#">Казначейські зобов'язання</a></li>
+					</ul>
+				</li>
+				<li>
+				 	<a href="#">Ощад 24/7</a>
+					<ul>
+						<li><a href="#">WEB-банкінг «Ощад 24/7»</a></li>
+	 					<li><a href="#">Mobile-банкінг «Ощад 24/7»</a></li>
+					</ul>
+				</li>
+				<li>
+				 	<a href="#">Прес-служба</a>
+					<ul>
+						<li><a href="#">Новини</a></li>
+	 					<li><a href="#">Контакти</a></li>
+	 					<li><a href="#">ЗМІ про нас</a></li>
+	 				</ul>
+				</li>
+			</ul>
 			<div class="menu">
-				<input type="checkbox" id="ch">
-				<ul> 
+				<ul class="expanded-menu">
 					<div class="inner-wrapper">
 						<li>
 							<a href="#">Депозити</a>
 							 <ul class="menu__popup deposit">
-									<li class="">
-										<ul>
-											<p>Депозитні програми Ощадбанку</p>
-											<li><a href="#">Класичний</a></li>
-											<li><a href="#">Капітал</a></li>
-											<li><a href="#">Гнучкий</a></li>
-											<li class="last"><a href="#" >Пенсійний</a></li>
-											<li class="butt"><a href="#">Депозитний калькулятор</a></li>
-										</ul>
-									</li>
+								<li class="">
+									<ul>
+										<p>Депозитні програми Ощадбанку</p>
+										<li><a href="#">Класичний</a></li>
+										<li><a href="#">Капітал</a></li>
+										<li><a href="#">Гнучкий</a></li>
+										<li class="last"><a href="#" >Пенсійний</a></li>
+										<li class="butt"><a href="#">Депозитний калькулятор</a></li>
+									</ul>
+								</li>
 							</ul>
 						</li>
 						<li>
-							<a href="#">Каредити</a>
+							<a href="#">Кредити</a>
 						</li>
 						<li>
 							<a href="#">Картки та рахунки</a>
 							<ul class="menu__popup cart">
-									<li class="cart-first">
-										<ul>
-											<p>Платіжні картки</p>
-											<li><a href="#">Моя картка</a></li>
-											<li><a href="#">Зарплатна картка</a></li>
-											<li><a href="#">Соціальна картка</a></li>
-											<li><a href="#">Корпоративна картка</li>
-											<li><a href="#">Стандартна картка</a></li>
-											<li><a href="#">Пенсійна картка</a></li>
-											<li><a href="#">Картка Киянина</a></li>
-											<li><a href="#">Кобрендова картка «віді автосіті» та wog</a></li>
-											<li><a href="#">Економна картка</a></li>
-											<li><a href="#">Арсенал</a></li>
-											<li><a href="#">Муніципальна картка</a></li>
-										</ul>
-									</li>
-									<li>
-										<ul>
-											<p>Корисна інформація</p>
-											<li><a href="#">Договір, тарифи, інше</a></li>
-											<li><a href="#">Курси БПК</a></li>
-											<li><a href="#">Новини та акції</a></li>
-										</ul>
-									</li>
-									<li >
-										<ul>
-											<p>Авто в кредит</p>
-											<li><a href="#">На електромобілі</a></li>
-											<li><a href="#">На нові авто</a></li>
-										</ul>
-									</li>
-									<li>
-										<ul>
-											<p>Нерухомість в кредит</p>
-											<li><a href="#">Нерухомість на вторинному ринку</a></li>
-										</ul>
-									</li>
-									<li>
-										<ul>
-											<p>Кредит під заставу або поруку</p>
-											<li><a href="#">Кредит під іпотеку</a></li>
-											<li><a href="#">Кредит під поруку</a></li>
-											<li><a href="#">Кредит під депозит</a></li>
-										</ul>
-									</li>
+								<li class="cart-first">
+									<ul>
+										<p>Платіжні картки</p>
+										<li><a href="#">Моя картка</a></li>
+										<li><a href="#">Зарплатна картка</a></li>
+										<li><a href="#">Соціальна картка</a></li>
+										<li><a href="#">Корпоративна картка</a></li>
+										<li><a href="#">Стандартна картка</a></li>
+										<li><a href="#">Пенсійна картка</a></li>
+										<li><a href="#">Картка Киянина</a></li>
+										<li><a href="#">Кобрендова картка «віді автосіті» та wog</a></li>
+										<li><a href="#">Економна картка</a></li>
+										<li><a href="#">Арсенал</a></li>
+										<li><a href="#">Муніципальна картка</a></li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<p>Корисна інформація</p>
+										<li><a href="#">Договір, тарифи, інше</a></li>
+										<li><a href="#">Курси БПК</a></li>
+										<li><a href="#">Новини та акції</a></li>
+									</ul>
+								</li>
+								<li >
+									<ul>
+										<p>Авто в кредит</p>
+										<li><a href="#">На електромобілі</a></li>
+										<li><a href="#">На нові авто</a></li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<p>Нерухомість в кредит</p>
+										<li><a href="#">Нерухомість на вторинному ринку</a></li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<p>Кредит під заставу або поруку</p>
+										<li><a href="#">Кредит під іпотеку</a></li>
+										<li><a href="#">Кредит під поруку</a></li>
+										<li><a href="#">Кредит під депозит</a></li>
+									</ul>
+								</li>
 							</ul>
 						</li>
 						 <li>
@@ -163,7 +264,7 @@
 						 		<input type="text" id="search">
 						 		<img class="search-img-one" src="http://www.oschadbank.ua/bitrix/templates/oschad_bank_new/img/icon-nav-search-desktop.png" alt="">
 						 		<img class="search-img-two" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/%D0%98%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0_%D0%BA%D1%80%D0%B5%D1%81%D1%82%D0%B8%D0%BA%D0%B0_(ei).svg/2000px-%D0%98%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0_%D0%BA%D1%80%D0%B5%D1%81%D1%82%D0%B8%D0%BA%D0%B0_(ei).svg.png" alt="">
-						 		 <div class="grid">
+						 		<div class="grid">
 									<li class="grid-item">
 										<ul>
 											<p>про Ощадбанк</p>
@@ -198,11 +299,11 @@
 											<li><a href="#">Новини</a></li>
 						 					<li><a href="#">Контакти</a></li>
 						 					<li><a href="#">ЗМІ про нас</a></li>
+						 				</ul>
 									</li>
 								</div>
 							</ul>
-						 </li>
-						
+						</li>
 					 </div>
 				</ul>
 			</div>
@@ -452,6 +553,7 @@
 	<script type="text/javascript" src="https://unpkg.com/isotope-layout@3.0.1/dist/isotope.pkgd.min.js"></script>
 	<script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
 	<script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
+	<script src="js/jquery.smartmenus.min.js" type="text/javascript"></script>
 	<script src="js/script.js"></script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDi1D5LcfExS5pVnTYDqArLKog8VOLV5P0&callback=initMap"></script>
 </body>

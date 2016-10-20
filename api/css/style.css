@@ -276,19 +276,10 @@ main {
 
 main .wrap-checked {
   height: 0px;
-  overflow: hidden;
   background: #161a1b;
-  width: 50px;
   position: absolute;
   top: 0;
   right: 0;
-}
-
-main .wrap-checked label[for="ch"] i {
-  font-size: 2rem;
-  line-height: 42px;
-  color: #dce123;
-  padding-left: 13px;
 }
 
 main .navigation {
@@ -297,15 +288,15 @@ main .navigation {
   z-index: 3;
 }
 
+main .navigation #main-menu {
+  display: none;
+}
+
 main .navigation .menu {
   -webkit-perspective: 1000px;
           perspective: 1000px;
   width: auto;
   margin-right: 250px;
-}
-
-main .navigation .menu input[type="checkbox"] {
-  display: none;
 }
 
 main .navigation .menu ul {
@@ -537,7 +528,7 @@ main .navigation .menu ul li .menu__popup.search .grid .grid-item ul li:hover {
   background-position: 0% 0;
 }
 
-main .navigation .menu ul li .search-img-two {
+main .navigation .menu ul li .menu__popup.search .search-img-two {
   width: 30px;
   position: absolute;
   position: absolute;
@@ -550,18 +541,18 @@ main .navigation .menu ul li .search-img-two {
   transition: background .2s;
 }
 
-main .navigation .menu ul li .search-img-two:hover {
+main .navigation .menu ul li .menu__popup.search .search-img-two:hover {
   background: #f4f750;
 }
 
-main .navigation .menu ul li .search-img-one {
+main .navigation .menu ul li .menu__popup.search .search-img-one {
   width: 18px;
   position: absolute;
   left: 10px;
   top: 15px;
 }
 
-main .navigation .menu ul li #search {
+main .navigation .menu ul li .menu__popup.search #search {
   width: 100%;
   min-width: 100%;
   -webkit-box-sizing: border-box;
@@ -593,6 +584,7 @@ main .slider {
   position: relative;
   width: -webkit-calc(100% - 260px);
   width: calc(100% - 260px);
+  margin-top: 26px;
 }
 
 main .slider .site-logo {
@@ -1277,32 +1269,99 @@ em.error {
   background-size: 200% 100%;
 }
 
-.select span {
-  display: block;
-  width: 110px;
-  height: 48px;
-  line-height: 43px;
-  background: transparent;
-  color: #71797c;
-  font-weight: 600;
-  font-size: 1.2rem;
-  height: 48px;
-  text-indent: 14px;
-}
-
-.select span:hover {
-  background: #dddf3c;
-  color: black;
-}
-
-.select span:hover .en,
-.select span:hover .ru {
-  display: block;
-  z-index: 2;
-}
-
 .hidden {
   display: none;
+}
+
+.main-menu-btn {
+  position: relative;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  left: 10px;
+  text-indent: 28px;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* hamburger icon */
+
+.main-menu-btn-icon,
+.main-menu-btn-icon:before,
+.main-menu-btn-icon:after {
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  height: 2px;
+  width: 24px;
+  background: #bbb;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.main-menu-btn-icon:before {
+  content: '';
+  top: -7px;
+  left: 0;
+}
+
+.main-menu-btn-icon:after {
+  content: '';
+  top: 7px;
+  left: 0;
+}
+
+/* x icon */
+
+#main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon {
+  height: 0;
+  background: transparent;
+}
+
+#main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon:before {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+}
+
+#main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon:after {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+}
+
+/* hide menu state checkbox (keep it visible to screen readers) */
+
+#main-menu-state {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* hide the menu in mobile view */
+
+#main-menu-state:not(:checked) ~ #main-menu {
+  display: none;
+}
+
+#main-menu-state:checked ~ #main-menu {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .main-menu-btn {
+    position: absolute;
+    top: -99999px;
+  }
 }
 
 footer {
@@ -1459,23 +1518,8 @@ header {
   font-family: 'Roboto', sans-serif;
 }
 
-header .wrap-access-type {
+header .access-type {
   font-family: 'PT Sans', sans-serif;
-  width: 180px;
-  height: 48px;
-}
-
-header .wrap-access-type input {
-  width: 150px;
-  height: 48px;
-  display: none;
-  background: transparent;
-  border: none;
-  margin-left: 20px;
-  color: #71797c;
-}
-
-header .wrap-access-type .access-type {
   width: 480px;
   height: 48px;
   margin-left: 30px;
@@ -1484,7 +1528,17 @@ header .wrap-access-type .access-type {
   font-weight: 500;
 }
 
-header .wrap-access-type .access-type span a {
+header .access-type ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header .access-type ul li {
+  display: inline-block;
+}
+
+header .access-type ul li a {
   color: #71797c;
   text-decoration: none;
   text-transform: uppercase;
@@ -1496,8 +1550,8 @@ header .wrap-access-type .access-type span a {
   transition: color,1s, easy-in-out;
 }
 
-header .wrap-access-type .access-type span a:hover,
-header .wrap-access-type .access-type span a:active {
+header .access-type ul li a:hover,
+header .access-type ul li a:active {
   color: #f4f750;
 }
 
@@ -1664,45 +1718,75 @@ header .setting .size-allfont:hover .font-plus {
 }
 
 @media only screen and (max-width: 1000px) {
-  footer .wrapper-footer ul {
-    margin-left: 0px !important;
-    margin-right: 8%;
+  header .type {
+    width: 200px !important;
+    margin-left: 45px;
+    z-index: 5;
+    position: relative;
   }
 
-  header .wrap-access-type #input-access-type {
-    display: block;
+  header .type ul {
+    width: 200px !important;
+    font-size: 0.9rem;
+    text-indent: 0;
   }
 
-  header .wrap-access-type .access-type span {
-    width: 238px;
-    height: 48px;
-    color: #dddf3c;
-    font-size: 1.2rem;
-    display: block;
+  header .type ul li a {
+    color: #dddf3c !important;
   }
 
-  header .slider {
-    margin-top: 70px;
+  header .type ul li:first-child:after {
+    border-top: 6px solid #dddf3c !important;
   }
 
-  header .credit-program p {
+  header .type ul:hover li:first-child:after {
+    border-top: 6px solid #000 !important;
+  }
+
+  header .type ul:hover a {
+    color: black !important;
+  }
+
+  main .navigation .menu ul li {
+    padding: 0 4px !important;
+    letter-spacing: 0.5px;
+  }
+
+  main .navigation .menu ul li .menu__popup.cart {
+    width: 100%;
+  }
+
+  main .navigation .menu ul li .menu__popup.search .grid {
+    min-height: 475px;
+  }
+
+  main .navigation .menu ul li .menu__popup.search .grid .grid-item {
+    max-width: 36%;
+  }
+
+  main .credit-program p {
     max-width: 330px;
   }
 
-  header .master-card h2 {
+  main .master-card h2 {
     max-width: 200px;
   }
 
-  header .master-card p {
+  main .master-card p {
     max-width: 300px;
   }
 
-  header .master-card .logo-master-card {
+  main .master-card .logo-master-card {
     display: none;
   }
 
   footer .wrapper-footer {
     min-width: 0px;
+  }
+
+  footer .wrapper-footer ul {
+    margin-left: 0px !important;
+    margin-right: 8%;
   }
 
   footer .wrapper-footer .footer-link {
@@ -1724,6 +1808,10 @@ header .setting .size-allfont:hover .font-plus {
   main .navigation .menu ul .inner-wrapper li:nth-child(4),
   main .navigation .menu ul .inner-wrapper li:nth-child(5) {
     display: none;
+  }
+
+  main .navigation .menu ul .inner-wrapper li .menu__popup.search .grid .grid-item {
+    max-width: 50%;
   }
 
   main .slider {
@@ -1750,7 +1838,28 @@ header .setting .size-allfont:hover .font-plus {
   }
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 768px) {
+  .sm-blue a .sub-arrow {
+    right: 55px !important;
+  }
+
+  main {
+    top: -40px;
+    position: relative;
+  }
+
+  main .navigation .menu .mobil-menu {
+    display: block;
+  }
+
+  main .navigation .menu .expanded-menu {
+    display: none;
+  }
+
+  main .slider {
+    margin-top: 64px;
+  }
+
   main .slider .site-logo {
     top: -45px;
     left: 30px;
@@ -1791,6 +1900,23 @@ header .setting .size-allfont:hover .font-plus {
 }
 
 @media only screen and (max-width: 650px) {
+  header .access-type {
+    display: none;
+  }
+
+  main {
+    overflow-x: hidden;
+  }
+
+  main .slider {
+    width: 100% !important;
+    margin-top: 28px;
+  }
+
+  main .slider .site-logo {
+    top: -9px;
+  }
+
   main .slider .main-slider .proposal-1 h2,
   main .slider .main-slider .proposal-1 p {
     padding-left: 20px !important;
@@ -1839,9 +1965,13 @@ header .setting .size-allfont:hover .font-plus {
     font-size: 0.8rem;
   }
 
-  main .table button {
-    width: 270px;
-    padding-left: 20px !important;
+  main .table .table-button {
+    margin-left: 0;
+    width: 316px;
+  }
+
+  main .info .map-button {
+    display: none;
   }
 
   main .application div {
@@ -1910,39 +2040,23 @@ header .setting .size-allfont:hover .font-plus {
     display: none;
   }
 
-  .table-button {
-    margin-left: 0;
-    width: 316px;
-  }
-
-  .info .map-button {
-    display: none;
-  }
-
-  .slider {
-    width: 100% !important;
-  }
-
   .slick-list {
     width: 100%;
-  }
-
-  main {
-    overflow-x: hidden;
-  }
-
-  main .slider .site-logo {
-    top: -9px;
-  }
-
-  .access-type {
-    display: none;
   }
 }
 
 @media only screen and (max-width: 550px) {
-  header .wrap-access-type .access-type {
+  header .access-type {
     width: 100px;
+  }
+
+  header .type {
+    width: 150px !important;
+  }
+
+  header .type ul {
+    width: 150px !important;
+    font-size: 0.74rem;
   }
 
   main .info {
@@ -1976,8 +2090,25 @@ header .setting .size-allfont:hover .font-plus {
 }
 
 @media only screen and (max-width: 425px) {
+  .select {
+    font-size: 1rem;
+    width: 92px;
+  }
+
+  header .setting .change-lang {
+    right: 10px;
+  }
+
+  header .setting .size-allfont {
+    display: none;
+  }
+
   aside .wrap-aside {
     display: none;
+  }
+
+  .sm-blue a .sub-arrow {
+    right: 4px !important;
   }
 
   main .slider .site-logo {
@@ -2063,31 +2194,6 @@ header .setting .size-allfont:hover .font-plus {
 
   main .master-card .logo-master-card {
     width: 120px;
-  }
-
-  main .wrap-checked {
-    height: 48px !important;
-  }
-
-  main .navigation .menu input[type="checkbox"]:checked + ul {
-    height: 100vh !important;
-    display: block;
-    background: #dce123;
-  }
-
-  main .navigation .menu ul {
-    height: 0;
-    overflow: hidden;
-    -webkit-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out;
-  }
-
-  main .navigation .menu ul .inner-wrapper li {
-    height: -webkit-calc((100vh - 56px ) / 5);
-    height: calc((100vh - 56px ) / 5);
-    display: block;
-    background: rgba(255, 255, 255, 0.8);
-    z-index: 5;
   }
 
   footer .wrapper-footer .footer-link li img {
