@@ -1383,7 +1383,7 @@ footer .wrapper-footer {
 }
 
 footer .wrapper-footer ul {
-  margin-left: 0px !important;
+  margin-left: 0px;
   margin-right: -webkit-calc((100% - 920px)/6);
   margin-right: calc((100% - 920px)/6);
 }
@@ -1718,49 +1718,49 @@ header .setting .size-allfont:hover .font-plus {
 }
 
 @media only screen and (max-width: 1000px) {
-  header .type {
-    width: 200px !important;
+  header div.type {
+    width: 200px;
     margin-left: 45px;
     z-index: 5;
     position: relative;
   }
 
-  header .type ul {
-    width: 200px !important;
+  header div.type ul {
+    width: 200px;
     font-size: 0.9rem;
     text-indent: 0;
   }
 
-  header .type ul li a {
-    color: #dddf3c !important;
+  header div.type ul li a {
+    color: #dddf3c;
   }
 
-  header .type ul li:first-child:after {
-    border-top: 6px solid #dddf3c !important;
+  header div.type ul li:first-child:after {
+    border-top: 6px solid #dddf3c;
   }
 
-  header .type ul:hover li:first-child:after {
-    border-top: 6px solid #000 !important;
+  header div.type ul:hover li:first-child:after {
+    border-top: 6px solid #000;
   }
 
-  header .type ul:hover a {
-    color: black !important;
+  header div.type ul:hover a {
+    color: black;
   }
 
-  main .navigation .menu ul li {
-    padding: 0 4px !important;
+  main .navigation div.menu ul li {
+    padding: 0 4px;
     letter-spacing: 0.5px;
   }
 
-  main .navigation .menu ul li .menu__popup.cart {
+  main .navigation div.menu ul li .menu__popup.cart {
     width: 100%;
   }
 
-  main .navigation .menu ul li .menu__popup.search .grid {
+  main .navigation div.menu ul li .menu__popup.search .grid {
     min-height: 475px;
   }
 
-  main .navigation .menu ul li .menu__popup.search .grid .grid-item {
+  main .navigation div.menu ul li .menu__popup.search .grid .grid-item {
     max-width: 36%;
   }
 
@@ -1780,21 +1780,24 @@ header .setting .size-allfont:hover .font-plus {
     display: none;
   }
 
-  footer .wrapper-footer {
+  footer div.wrapper-footer {
     min-width: 0px;
   }
 
-  footer .wrapper-footer ul {
-    margin-left: 0px !important;
+  footer div.wrapper-footer ul.helpful-link,
+  footer div.wrapper-footer ul.info-contact,
+  footer div.wrapper-footer ul.footer-link,
+  footer div.wrapper-footer ul.label {
+    margin-left: 0px;
     margin-right: 8%;
   }
 
-  footer .wrapper-footer .footer-link {
+  footer div.wrapper-footer ul.footer-link {
     width: 38%;
     margin-left: 20px;
   }
 
-  footer .wrapper-footer .info-contact {
+  footer div.wrapper-footer ul.info-contact {
     width: 24%;
     margin-left: 20px;
   }
@@ -1908,64 +1911,64 @@ header .setting .size-allfont:hover .font-plus {
     overflow-x: hidden;
   }
 
-  main .slider {
-    width: 100% !important;
+  main section.slider {
+    width: 100%;
     margin-top: 28px;
   }
 
-  main .slider .site-logo {
+  main section.slider .site-logo {
     top: -9px;
   }
 
-  main .slider .main-slider .proposal-1 h2,
-  main .slider .main-slider .proposal-1 p {
-    padding-left: 20px !important;
+  main section.slider .main-slider .proposal-1 h2,
+  main section.slider .main-slider .proposal-1 p {
+    padding-left: 20px;
   }
 
-  main .slider .main-slider .proposal-1 h2 {
+  main section.slider .main-slider .proposal-1 h2 {
     font-size: 2.5rem;
   }
 
-  main .slider .main-slider .proposal-2 h2 {
-    padding-left: 20px !important;
+  main section.slider .main-slider .proposal-2 h2 {
+    padding-left: 20px;
     font-size: 2.5rem;
   }
 
-  main .slider .main-slider .proposal-2 .kartka {
+  main section.slider .main-slider .proposal-2 .kartka {
     width: 300px;
     right: 20px;
   }
 
-  main .slider .main-slider .proposal-3 h2 {
-    padding-left: 20px !important;
+  main section.slider .main-slider .proposal-3 h2 {
+    padding-left: 20px;
     font-size: 2.5rem;
   }
 
-  main .table .wrap-caption {
-    padding-left: 20px !important;
+  main section.table .wrap-caption {
+    padding-left: 20px;
   }
 
-  main .table .wrap-caption h2 {
+  main section.table .wrap-caption h2 {
     padding-bottom: 20px;
   }
 
-  main .table table {
-    padding-left: 20px !important;
+  main section.table table {
+    padding-left: 20px;
   }
 
-  main .table table tr {
+  main section.table table tr {
     padding-bottom: 5px;
   }
 
-  main .table table tr th {
+  main section.table table tr th {
     font-size: 0.6rem;
   }
 
-  main .table table tr td {
+  main section.table table tr td {
     font-size: 0.8rem;
   }
 
-  main .table .table-button {
+  main section.table .table-button {
     margin-left: 0;
     width: 316px;
   }
@@ -1987,10 +1990,10 @@ header .setting .size-allfont:hover .font-plus {
     width: 450px;
   }
 
-  main .useful-info,
-  main .info-deposit,
-  main .loyalty-program {
-    padding-left: 20px !important;
+  main section.useful-info,
+  main div.info-deposit,
+  main section.loyalty-program {
+    padding-left: 20px;
   }
 
   main .master-card {
@@ -2050,12 +2053,12 @@ header .setting .size-allfont:hover .font-plus {
     width: 100px;
   }
 
-  header .type {
-    width: 150px !important;
+  header div.type {
+    width: 150px;
   }
 
-  header .type ul {
-    width: 150px !important;
+  header div.type ul {
+    width: 150px;
     font-size: 0.74rem;
   }
 
@@ -2131,8 +2134,8 @@ header .setting .size-allfont:hover .font-plus {
     width: 260px;
   }
 
-  main .slider .main-slider .proposal-3 h2 {
-    padding-left: 0px !important;
+  main .slider .main-slider div.proposal-3 h2 {
+    padding-left: 0px;
   }
 
   main .table .wrap-caption {

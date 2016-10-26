@@ -44,36 +44,36 @@
 			p 
 				max-width: 585px
 @media only screen and (max-width: 1000px)
-	header 
-		.type
-			width: 200px!important
+	header
+		div.type
+			width: 200px
 			margin-left: 45px
 			z-index: 5
 			position: relative
 			ul
-				width: 200px!important
+				width: 200px
 				font-size: 0.9rem
 				text-indent: 0
 				li
 					a
-						color: #dddf3c!important
+						color: #dddf3c
 					&:first-child
 						&:after
-							border-top: 6px solid #dddf3c!important
+							border-top: 6px solid #dddf3c
 				&:hover
 					li
 						&:first-child
 							&:after
-								border-top: 6px solid #000 !important
+								border-top: 6px solid #000
 					a
-						color: black!important
+						color: black
 
 	main 
 		.navigation
-			.menu 
+			div.menu 
 				ul 
 					li 
-						padding: 0 4px!important
+						padding: 0 4px
 						letter-spacing: 0.5px
 						.menu__popup.cart
 							width: 100%
@@ -82,8 +82,6 @@
 								min-height: 475px
 								.grid-item
 									max-width: 36%
-		// .slider
-		// 	margin-top: 70px
 		.credit-program
 			p
 				max-width: 330px
@@ -95,15 +93,15 @@
 			.logo-master-card
 				display: none
 	footer
-		.wrapper-footer
+		div.wrapper-footer
 			min-width: 0px
-			ul
-				margin-left: 0px!important
+			ul.helpful-link, ul.info-contact, ul.footer-link, ul.label
+				margin-left: 0px
 				margin-right: 8%
-			.footer-link
+			ul.footer-link
 				width: 38%
 				margin-left: 20px
-			.info-contact 
+			ul.info-contact 
 				width: 24%
 				margin-left: 20px
 @media only screen and (max-width: 860px) 
@@ -186,35 +184,35 @@
 			display: none
 	main 
 		overflow-x: hidden
-		.slider 
-			width: 100% !important
+		section.slider 
+			width: 100% 
 			margin-top: 28px
 			.site-logo
 				top: -9px
 			.main-slider 
 				.proposal-1
 					h2, p
-						padding-left: 20px!important
+						padding-left: 20px
 					h2
 						font-size: 2.5rem
 				.proposal-2 
 					h2
-						padding-left: 20px!important
+						padding-left: 20px
 						font-size: 2.5rem
 					.kartka
 						width: 300px
 						right: 20px
 				.proposal-3 
 					h2
-						padding-left: 20px!important
+						padding-left: 20px
 						font-size: 2.5rem
-		.table
+		section.table
 			.wrap-caption
-				padding-left: 20px!important
+				padding-left: 20px
 				h2
 					padding-bottom: 20px
 			table
-				padding-left: 20px!important
+				padding-left: 20px
 				
 				tr
 					padding-bottom: 5px
@@ -235,8 +233,8 @@
 					width: 454px
 				input
 					width: 450px
-		.useful-info, .info-deposit, .loyalty-program
-			padding-left: 20px!important
+		section.useful-info, div.info-deposit, section.loyalty-program
+			padding-left: 20px
 		.master-card
 			padding-left: 20px
 			p 
@@ -271,10 +269,10 @@
 	header 
 		.access-type
 			width: 100px
-		.type
-			width: 150px !important
+		div.type
+			width: 150px
 			ul
-				width: 150px !important
+				width: 150px
 				font-size: 0.74rem
 	main 
 		.info 
@@ -321,9 +319,9 @@
 				.proposal-2 
 					.kartka
 						width: 260px
-				.proposal-3
+				div.proposal-3
 					h2
-						padding-left: 0px !important
+						padding-left: 0px
 		.table
 			.wrap-caption
 				padding-top: 0px
